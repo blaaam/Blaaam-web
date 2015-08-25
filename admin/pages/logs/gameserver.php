@@ -5,8 +5,8 @@
 <body>
 <?php
 // full path to text file
-define("TEXT_FILE", "C:/Users/Autonets/Desktop/lineage2/lineage2/game/log/java0.log");
-$filename = 'C:/Users/Autonets/Desktop/lineage2/lineage2/game/log/java0.log';
+define("PATH_GAMESERVER", "C:/Users/Autonets/Desktop/lineage2/lineage2/game/log/java0.log");
+$filename = (PATH_GAMESERVER);
 // number of lines to read from the end of file
 define("LINES_COUNT", 100);
 
@@ -41,8 +41,8 @@ if (file_exists($filename)) {
     return array_reverse($text);
 }
 
-$fsize = round(filesize(TEXT_FILE)/1024/1024,2);
-$lines = read_file(TEXT_FILE, LINES_COUNT);
+$fsize = round(filesize(PATH_GAMESERVER)/1024/1024,2);
+$lines = read_file(PATH_GAMESERVER, LINES_COUNT);
 	
 	
 	foreach ($lines as $line) {
@@ -51,7 +51,7 @@ $lines = read_file(TEXT_FILE, LINES_COUNT);
 }
 	
 } else {
-    echo "<font color='white'><strong>The log file does not exist</strong><br />To add file log, go to web root/_admin/paginas/log/ and edit index.php!</font>";
+    echo "<font color='white'><strong>The log file does not exist</strong><br />To add file log, go to web root/admin/pages/log/ and edit gameserver.php!</font>";
 }
 
 
