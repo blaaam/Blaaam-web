@@ -1,5 +1,5 @@
 <?php
-//NÃO MEXER EM NADA NESTA PARTE, CODIGOS PARA TRATAR E CHAMATAR INFORMAÇÕES DE USUARIOS E DEMAIS.
+//Not sure yet what this does!
 
 
 	if(isset($_SESSION[Servername."login"])){
