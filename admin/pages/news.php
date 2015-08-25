@@ -92,7 +92,7 @@
 	$seleciona->execute();
 	if($seleciona->rowCount() <= 0){
     echo '<div class="alert alert-danger">
-          <strong>Error!</strong> There is no new at the moment. </a>
+          <strong>Error!</strong> There is no news at the moment. </a>
           </div>';
 	}else{
 	
@@ -133,14 +133,14 @@
 	if($seleciona->rowCount() >= 1){
 		for($i = $pg-$link; $i <= $pg-1;$i++){
 		if($i <= 0){}else{
-			echo '<a class="btn-d2" href="?p=listar&pg='.$i.'"><span class="glyphicon glyphicon-chevron-left"></span>  Previus page</a>';	
+			echo '<a class="btn-d2" href="?p=news&pg='.$i.'"><span class="glyphicon glyphicon-chevron-left"></span>  Previus page</a>';	
 		}	
 	}
 	}
 	
 	for($i = $pg+1; $i <= $pg+$link; $i++){
 		if($i > $paginas){}else{
-		echo '<a class="btn-d2" href="?p=listar&pg='.$i.'">Next page <span class="glyphicon glyphicon-chevron-right"></span></a>';	
+		echo '<a class="btn-d2" href="?p=news&pg='.$i.'">Next page <span class="glyphicon glyphicon-chevron-right"></span></a>';	
 		}
 	}
 	

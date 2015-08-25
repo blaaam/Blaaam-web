@@ -4,9 +4,9 @@
 </head>
 <body>
 <?php
-// full path to text file
-define("TEXT_FILE", "C:/Users/Autonets/Desktop/lineage2/lineage2/login/log/java0.log");
-$filename = 'C:/Users/Autonets/Desktop/lineage2/lineage2/login/log/java0.log';
+// full path to login file
+define("PATH_LOGINSERVER", "C:/Users/Autonets/Desktop/lineage2/lineage2/login/log/java0.log");
+$filename = (PATH_LOGINSERVER);
 // number of lines to read from the end of file
 define("LINES_COUNT", 100);
 
@@ -41,8 +41,8 @@ if (file_exists($filename)) {
     return array_reverse($text);
 }
 
-$fsize = round(filesize(TEXT_FILE)/1024/1024,2);
-$lines = read_file(TEXT_FILE, LINES_COUNT);
+$fsize = round(filesize(PATH_LOGINSERVER)/1024/1024,2);
+$lines = read_file(PATH_LOGINSERVER, LINES_COUNT);
 	
 	
 	foreach ($lines as $line) {

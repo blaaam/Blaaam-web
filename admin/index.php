@@ -96,33 +96,33 @@ session_start();
 		<ul>
 		  <li class="active has-sub right-user"><a href="?p=home"><span><h5>Welcome - <span><?php echo $_SESSION["logins"];?></span></h5> </span></a>
 		      <ul>
-		         <li class='has-sub'><a href='?p=sair'><span><span class="glyphicon glyphicon-off"></span> Logout</span></a></li>
+		         <li class='has-sub'><a href='?p=logout'><span><span class="glyphicon glyphicon-off"></span> Logout</span></a></li>
 			  </ul>
 		  </li>
 		  <li class='has-sub'><a href='#'><span><span class="glyphicon glyphicon-menu-hamburger"></span> Website administration</span></a>
 		      <ul>
 		         <li class='has-sub'><a href='#'><span><span class="glyphicon glyphicon-globe"></span> Posts</span></a>
 		            <ul>
-		               <li><a href='?p=notice'><span><span class="glyphicon glyphicon-pencil"></span> Add Post</span></a></li>
-		               <li class='last'><a href='?p=listar'><span><span class="glyphicon glyphicon-book"></span> Show Posts</span></a></li>
+		               <li><a href='?p=add_news'><span><span class="glyphicon glyphicon-pencil"></span> Add Post</span></a></li>
+		               <li class='last'><a href='?p=news'><span><span class="glyphicon glyphicon-book"></span> Show Posts</span></a></li>
 		            </ul>
 		         </li>
 		         <li class='has-sub'><a href='#'><span><span class="glyphicon glyphicon-picture"></span> ScreenShots</span></a>
 		            <ul>
-		               <li><a href='?p=screen'><span><span class="glyphicon glyphicon-camera"></span> Add ScreenShot</span></a></li>
+		               <li><a href='?p=add_screen'><span><span class="glyphicon glyphicon-camera"></span> Add ScreenShot</span></a></li>
 		               <li class='last'><a href='?p=gallery'><span><span class="glyphicon glyphicon-book"></span> Show ScreenShots</span></a></li>
 		            </ul>
 		         </li>
 		         <li class='has-sub'><a href='#'><span><span class="glyphicon glyphicon-shopping-cart"></span> Donations</span></a>
 		            <ul>
-		               <li><a href='?p=adicionar_doacao'><span><span class="glyphicon glyphicon-plus"></span> Add Donation</span></a></li>
-		               <li class='last'><a href='?p=listar-doacoes'><span><span class="glyphicon glyphicon-book"></span> Show Donations</span></a></li>
+		               <li><a href='?p=add_donation'><span><span class="glyphicon glyphicon-plus"></span> Add Donation</span></a></li>
+		               <li class='last'><a href='?p=donations_list'><span><span class="glyphicon glyphicon-book"></span> Show Donations</span></a></li>
 		            </ul>
 		         </li>
-		         <li class='has-sub'><a href='?p=comprovantes'><span><span class="glyphicon glyphicon-ok-sign"></span> Confirmed Donations <span class="compreved"><?php echo $donate_count->rowCount() ;?></span></span></a></li>
-		         <li class='has-sub'><a href='?p=reportados'><span><span class="glyphicon glyphicon-bullhorn"></span> Reported Players <span class="reported"><?php echo $report_count->rowCount() ;?></span></span></a></li>
-		         <li class='has-sub'><a href='?p=manu'><span><span class="glyphicon glyphicon-warning-sign"></span> Maintance Module </span></a></li>
-				 <li class='has-sub'><a href='?p=log'><span><span class="glyphicon glyphicon-wrench"></span> Configs</span></a>
+		         <li class='has-sub'><a href='?p=donations'><span><span class="glyphicon glyphicon-ok-sign"></span> Confirmed Donations <span class="compreved"><?php echo $donate_count->rowCount() ;?></span></span></a></li>
+		         <li class='has-sub'><a href='?p=reported'><span><span class="glyphicon glyphicon-bullhorn"></span> Reported Players <span class="reported"><?php echo $report_count->rowCount() ;?></span></span></a></li>
+		         <li class='has-sub'><a href='?p=maintenance'><span><span class="glyphicon glyphicon-warning-sign"></span> Maintance Module </span></a></li>
+				 <li class='has-sub'><a href='#'><span><span class="glyphicon glyphicon-wrench"></span> Configs</span></a>
 		            <ul>
 		               <li><a href='#'><span><span class="glyphicon glyphicon-lock"></span> Languages</span></a></li>
 		               <li><a href='#'><span><span class="glyphicon glyphicon-lock"></span> Configs</span></a></li>
@@ -135,19 +135,19 @@ session_start();
 		      <ul>
 		         <li class='has-sub'><a href='#'><span><span class="glyphicon glyphicon-wrench"></span> Functions</span></a>
 		            <ul>
-		               <li><a href='?p=trocar_nick'><span><span class="glyphicon glyphicon-edit"></span> Change Characters Nick</span></a></li>
-		               <li><a href='?p=nobre'><span><span class="glyphicon glyphicon-star"></span> Give nobless status</span></a></li>
-		               <li><a href='?p=deletar_char1'><span><span class="glyphicon glyphicon-remove"></span> Delete chars with 1LVL</span></a></li>
+		               <li><a href='?p=nick_change'><span><span class="glyphicon glyphicon-edit"></span> Change Characters Nick</span></a></li>
+		               <li><a href='?p=nobless'><span><span class="glyphicon glyphicon-star"></span> Give nobless status</span></a></li>
+		               <li><a href='?p=delete_char1'><span><span class="glyphicon glyphicon-remove"></span> Delete chars with 1LVL</span></a></li>
 		               <li><a href='?p=info_server'><span><span class="glyphicon glyphicon-tasks"></span> Server Information</span></a></li>
 		               <li><a href='?p=clan'><span><span class="glyphicon glyphicon-list"></span> Show Clans</span></a></li>
-		               <li><a href='?p=recs'><span><span class="glyphicon glyphicon-plus"></span> Add/Remove recomendation</span></a></li>
+		               <li><a href='?p=recomendations'><span><span class="glyphicon glyphicon-plus"></span> Add/Remove recomendation</span></a></li>
 		               <li class='last'><a href='?p=ban'><span><span class="glyphicon glyphicon-lock"></span> Add/Remove BAN</span></a></li>
 		            </ul>
 		         </li>
 				 <li class='has-sub'><a href='?p=log'><span><span class="glyphicon glyphicon-list"></span> Logs</span></a>
 		            <ul>
-		               <li><a href='?p=gamelog'><span><span class="glyphicon glyphicon-list"></span> Gameserver</span></a></li>
-		               <li><a href='?p=loginlog'><span><span class="glyphicon glyphicon-list"></span> Loginserver</span></a></li>
+		               <li><a href='?p=gameserver'><span><span class="glyphicon glyphicon-list"></span> Gameserver</span></a></li>
+		               <li><a href='?p=loginserver'><span><span class="glyphicon glyphicon-list"></span> Loginserver</span></a></li>
 		            </ul>
 		         </li>
 		      </ul>
