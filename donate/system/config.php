@@ -31,14 +31,14 @@ define("USE_SANDBOX", true);
 if (USE_SANDBOX == true)
 {
 	// Test seller account
-	$myPayPalEmail = 'nr18@inbox.lv';
+	$myPayPalEmail = '';
 	$payPalURL = "https://www.sandbox.paypal.com/cgi-bin/webscr";
 }
 else
 {
 	// Fill your PayPal email below
 	// This is where you will receive the donations
-	$myPayPalEmail = 'nr18@inbox.lv';
+	$myPayPalEmail = '';
 	$payPalURL = "https://www.paypal.com/cgi-bin/webscr";
 }
 
