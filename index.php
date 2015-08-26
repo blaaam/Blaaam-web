@@ -434,10 +434,10 @@ include_once 'languages/'.$lang_file;
   ga('create', 'UA-66154329-1', 'auto');
   ga('send', 'pageview');
 </script>
-	<script type="text/javascript" src="_js/lightbox/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="_js/lightbox/js/lightbox.js"></script>
-    <script type="text/javascript" src="_js/jquery.js" ></script>
-    <script type="text/javascript" src="_js/jquery.maskMoney.js" ></script>
+	<script type="text/javascript" src="js/lightbox/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/lightbox/js/lightbox.js"></script>
+    <script type="text/javascript" src="js/jquery.js" ></script>
+    <script type="text/javascript" src="js/jquery.maskMoney.js" ></script>
     <script type="text/javascript">
         $(document).ready(function(){
               $("input.dinheiro").maskMoney({showSymbol:true, symbol:"ā‚¬", decimal:",", thousands:"."});
