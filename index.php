@@ -2,8 +2,8 @@
 session_start();
 include("config/connection.php");
 include("config/login.class.php");
-include("config/configuration.php");
-include("functions/fun.php");
+include("include/config.php");
+//include("functions/fun.php");
 $class = new login();
 ob_start();
 $manu = $conexao->prepare("SELECT manutencao FROM web_configs WHERE manutencao = 'false'");
@@ -98,11 +98,11 @@ include_once 'languages/'.$lang_file;
 <div class="bar">
 	<div class="cont_bar">
 		<ul class="info_server">
-			<li><?php echo $lang['BAR_XP']; ?><strong><?php echo xp ?>x</strong></li>
-			<li><?php echo $lang['BAR_SP']; ?><strong><?php echo sp ?>x</strong></li>
-			<li><?php echo $lang['BAR_DROP']; ?><strong><?php echo drop ?>x</strong></li>
-			<li><?php echo $lang['BAR_ADENA']; ?><strong><?php echo adena ?>x</strong></li>
-			<li><?php echo $lang['BAR_SPOIL']; ?><strong><?php echo spoil ?>x</strong></li>
+			<li><?php echo $lang['BAR_XP']; ?><strong><?php echo RATE_XP ?>x</strong></li>
+			<li><?php echo $lang['BAR_SP']; ?><strong><?php echo RATE_SP ?>x</strong></li>
+			<li><?php echo $lang['BAR_DROP']; ?><strong><?php echo RATE_DROP ?>x</strong></li>
+			<li><?php echo $lang['BAR_ADENA']; ?><strong><?php echo RATE_ADENA ?>x</strong></li>
+			<li><?php echo $lang['BAR_SPOIL']; ?><strong><?php echo RATE_SPOIL ?>x</strong></li>
 			<li><?php echo $lang['BAR_ON']; ?><strong><?php print $online->rowCount(); ?></strong></li>
 			<li><a href="http://l2kalev.tk/index.php?lang=en"><img name="English" alt="English" src="/languages/gb.gif" width="16" height="11" /></a>&nbsp;</li>
 			<li><a href="http://l2kalev.tk/index.php?lang=br"><img name="Brasil" alt="Brasil" src="/languages/BR.png" width="16" height="11" /></a>&nbsp;</li>
@@ -220,7 +220,7 @@ include_once 'languages/'.$lang_file;
 		<section class="cont-right">
 			<h2><?php echo $lang['RIGHT_CP']; ?></h2>
 			<?php  
-			if(!isset($_SESSION[Servername."login"]) && !isset($_SESSION[Servername."senha"])){	
+			if(!isset($_SESSION[SERVER_NAME."login"]) && !isset($_SESSION[SERVER_NAME."senha"])){	
 			?>
 			<form action="" class="login" method="post" enctype="multipart/form-data">
 				<input type="text" name="usuario" id="usuario" placeholder="<?php echo $lang['RIGHT_EUSER']; ?>"/><br>
