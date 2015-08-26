@@ -1,8 +1,8 @@
 <?php
 session_start();
-include("config/connection.php");
-include("config/login.class.php");
-include("include/config.php");
+include("includes/connection.php");
+include("includes/login.class.php");
+include("includes/config.php");
 include("functions/fun.php");
 $class = new login();
 ob_start();
