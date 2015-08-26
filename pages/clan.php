@@ -1,4 +1,4 @@
-<?php if(!isset($pro)){echo 'Página protegida!'; exit;};?>
+<?php if(!isset($pro)){echo 'Protected Page!'; exit;};?>
 <br>
 
 <table width="635" border="0" cellspacing="2" style="margin:0px 0" class="ranking">
@@ -18,11 +18,11 @@
 	  $res['pks'] = empty($res['pks']) ? $res['pks'] = '0' : $res['pks'];
 
   if($i == 1){
-    $img = "<img src=\"_imagens/top1.gif\" alt=\"\">";
+    $img = "<img src=\"images/top1.gif\" alt=\"\">";
   }elseif($i == 2){
-    $img = "<img src=\"_imagens/top2.gif\" alt=\"\">";
+    $img = "<img src=\"images/top2.gif\" alt=\"\">";
   }elseif($i == 3){
-    $img = "<img src=\"_imagens/top3.gif\" alt=\"\">";
+    $img = "<img src=\"images/top3.gif\" alt=\"\">";
   }else{
     $img = $i."&ordm;";
   }
