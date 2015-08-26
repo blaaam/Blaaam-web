@@ -54,19 +54,19 @@
 @font-face {
 	font-family: corbelb;
 	font-weight: normal;
-	src: url(../_fonts/CORBELB.TTF);
+	src: url(../fonts/CORBELB.TTF);
 }
 
 @font-face {
 	font-family: calibrib;
 	font-weight: normal;
-	src: url(../_fonts/CALIBRIB.TTF);
+	src: url(../fonts/CALIBRIB.TTF);
 }
 
 @font-face {
 	font-family: franklin;
 	font-weight: normal;
-	src: url(../_fonts/framd.ttf);
+	src: url(../fonts/framd.ttf);
 }
 
 * {
@@ -76,7 +76,7 @@
 
 body {
 	font-family: sans-serif;
-	background: url("../_imagens/bg.png") no-repeat #000000;
+	background: url("../images/bg.png") no-repeat #000000;
 	background-size: 100%;
 	background-attachment: fixed;
 }
@@ -126,7 +126,7 @@ nav#menu {
 	height: 73px;
 	border-radius: 6px;
 	position: relative;
-	background: url("../_imagens/menu.png");
+	background: url("../images/menu.png");
 	top: 50px;
 	border: 1px solid #444;
 	box-shadow: inset 0 0 25px 2px rgba(0, 0, 0, .5), 0 0 4px 1px
@@ -163,8 +163,8 @@ nav#menu li a {
 	-moz-transition: all 400ms;
 	-ms-transition: all 400ms;
 	-o-transition: all 400ms;
-	background: url(../_imagens/menu_item_left_bg.png) no-repeat left top,
-		url(../_imagens/menu_item_right_bg.png) no-repeat right top;
+	background: url(../images/menu_item_left_bg.png) no-repeat left top,
+		url(../images/menu_item_right_bg.png) no-repeat right top;
 	padding: 29px 30px;
 	transition: all 600ms;
 	-webkit-transition: all 600ms;
@@ -188,13 +188,13 @@ nav#menu li:hover {
 }
 
 nav#menu li:last-child a {
-	background: url(../_imagens/menu_item_left_bg.png) no-repeat left top,
-		url(../_imagens/menu_item_fl_bg.png) no-repeat right top;
+	background: url(../images/menu_item_left_bg.png) no-repeat left top,
+		url(../images/menu_item_fl_bg.png) no-repeat right top;
 }
 
 nav#menu li:first-child a {
-	background: url(../_imagens/menu_item_fl_bg.png) no-repeat left top,
-		url(../_imagens/menu_item_right_bg.png) no-repeat right top;
+	background: url(../images/menu_item_fl_bg.png) no-repeat left top,
+		url(../images/menu_item_right_bg.png) no-repeat right top;
 }
 
 nav#menu ul li ul {
@@ -227,7 +227,7 @@ nav#menu ul li ul a {
 div#banner {
 	width: 1024px;
 	height: 542px;
-	background: url("../_imagens/banner.png") no-repeat;
+	background: url("../images/banner.png") no-repeat;
 	background-size: 90%;
 	margin-top: 20px;
 	float: left;
@@ -275,7 +275,7 @@ div.tam-conteudo {
 div.title {
 	width: 100%;
 	height: 70px;
-	background: url("../_imagens/menu.png");
+	background: url("../images/menu.png");
 	border-bottom: 1px solid #222;
 }
 
@@ -294,7 +294,7 @@ div.title h2 {
 div.title-2 {
 	width: 100%;
 	height: 70px;
-	background: url("../_imagens/menu.png");
+	background: url("../images/menu.png");
 	border-top: 1px solid #222;
 	border-bottom: 1px solid #222;
 }
@@ -649,9 +649,6 @@ div.donate a {
 		rgba(0, 0, 0, .4);
 }
 
-/* Fim todo o SECTION CONTEUDO */
-
-/* Estilizando Sistema de noticias */
 div.divulgar {
 	width: 624px;
 	height: 146px;
@@ -808,9 +805,6 @@ div.next a {
 	font-size: 14px;
 }
 
-/* Fim Estilizando Sistema de noticias */
-
-/* Estilizando todo o ASIDE LATERAL */
 aside#conteudo-lateral {
 	width: 340px;
 	height: auto;
@@ -857,7 +851,6 @@ section.cont-right a:hover {
 	text-decoration: underline;
 }
 
-/* Estilizando Tabelas */
 table.ranking {
 	width: 100%;
 	margin-top: 10px;
@@ -891,11 +884,7 @@ td.td-right {
 	padding: 5px;
 }
 
-/* Fim de estilização Tabelas */
 
-/* Fim todo o ASIDE LATERAL */
-
-/* Estilizando NOTICIAS */
 div#destaque {
 	width: 614px;
 	background-color: #333;
@@ -904,7 +893,6 @@ div#destaque {
 	padding: 10px;
 }
 
-/* Fim estilização NOTICIAS */
 #conteudo_titulo h2 {
 	color: #999;
 	font-size: 14px;
@@ -940,7 +928,6 @@ div#destaque {
 	border: none;
 }
 
-/* ASIDE GALERY */
 #gallery2 li {
 	list-style: none;
 	display: inline-block;

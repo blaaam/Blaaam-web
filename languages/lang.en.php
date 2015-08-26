@@ -153,4 +153,12 @@ $lang['CAD_PASSAGAIN'] = 'Enter password again';
 $lang['CAD_EMAIL'] = 'Enter e-mail';
 $lang['CAD_REGISTER'] = 'Register';
 
+/* 
+------------------
+POLL: WEBSITE
+------------------
+*/
+
+$lang['POLL_VOTE'] = 'VOTE';
+
 ?>

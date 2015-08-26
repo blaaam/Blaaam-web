@@ -1,4 +1,3 @@
-/* Estilizando formulario de cadastro */
 form.cadastro {
 	display: block;
 	position: relative;
@@ -51,9 +50,7 @@ form.cadastro input[type=submit] {
 	-ms-transition: all 400ms;
 	-o-transition: all 400ms;
 }
-/* Estilizando formulario de cadastro */
 
-/* Estilizando formulario de Login */
 form.login {
 	display: block;
 	position: relative;
@@ -106,9 +103,6 @@ form.login input[type=submit] {
 	-o-transition: all 400ms;
 }
 
-/* Estilizando formulario de login */
-
-/* Estilizando formulario de Contato */
 form.contato {
 	position: relative;
 	margin-top: 15px;
@@ -182,9 +176,6 @@ form.contato input[type=submit] {
 	outline: none;
 }
 
-/* Fim Estilização formulario de login */
-
-/* Estilização formulario de trocar senha */
 form.change-pass {
 	position: relative;
 	margin-top: 15px;
@@ -233,9 +224,6 @@ form.change-pass input[type=submit] {
 	outline: none;
 }
 
-/* Fim Estilização formulario de trocar senha */
-
-/* Estilização formulario de Confirmar Doação */
 form.donate {
 	position: relative;
 	margin-top: 15px;
@@ -346,9 +334,7 @@ form.donate input[type=file] {
 .custom-file-input:active::before {
 	background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
-/* Fim Estilização formulario de Confirmar Doação */
 
-/* Estilizando formulario de Reportagem de player */
 form.report {
 	display: block;
 	position: relative;
@@ -429,9 +415,7 @@ form.report input[type=submit] {
 	-ms-transition: all 400ms;
 	-o-transition: all 400ms;
 }
-/* Estilizando formulario de Reportagem de player */
 
-/* Estilizando formulario de cadastro */
 form.recover {
 	display: block;
 	position: relative;
@@ -484,4 +468,3 @@ form.recover input[type=submit] {
 	-ms-transition: all 400ms;
 	-o-transition: all 400ms;
 }
-/* Estilizando formulario de cadastro */

@@ -1,9 +1,9 @@
 <?php
 session_start();
-include("_config/conexao.php");
-include("_config/login.class.php");
-include("_config/configuracoes.php");
-include("_function/fun.php");
+include("config/connection.php");
+include("config/login.class.php");
+include("config/configuration.php");
+include("functions/fun.php");
 $class = new login();
 ob_start();
 $manu = $conexao->prepare("SELECT manutencao FROM web_configs WHERE manutencao = 'false'");
@@ -63,17 +63,29 @@ include_once 'languages/'.$lang_file;
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Lineage 2 Kalev</title>
+	<title><?php echo SITE_TITLE ?></title>
 	<meta charset="UTF-8">
-	<meta name="description" content="Lineage ][ Ertheia - Private server">
-	<meta name="keywords" content="Our private server provides best of Lineage ][ Ertheia client. Our private server files are made by best Devlopers to give you best experiance">
-	<meta name="author" content="l2ertheia.tk">
-	<link rel="stylesheet" type="text/css" href="_css/estilo.css">
-	<link rel="stylesheet" type="text/css" href="_css/classes.css">
-	<link rel="stylesheet" type="text/css" href="_css/form.css">
-	<link rel="stylesheet" type="text/css" href="_css/slideshow.css"/>
-	<link rel="stylesheet" type="text/css" href="_css/user.login.css">
-	<link rel="stylesheet" type="text/css" href="_js/lightbox/css/lightbox.css" />
+	<meta name="description" content="<?php echo SITE_DESCRIPTION ?>">
+	<meta name="keywords" content="<?php echo SITE_KEYWORDS ?>">
+	<meta name="author" content="<?php echo SITE_AUTHOR ?>">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/classes.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<link rel="stylesheet" type="text/css" href="css/slideshow.css"/>
+	<link rel="stylesheet" type="text/css" href="css/user.login.css">
+	<link rel="stylesheet" type="text/css" href="js/lightbox/css/lightbox.css" />
+	<style type="text/css">
+  			#slideshow .c_slider {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 400%;
+				height: 310px;
+				background: url(../<?php echo PATH_SLIDE1 ?>) 0 0 no-repeat,
+				url(../<?php echo PATH_SLIDE2 ?>) 600px 0 no-repeat,
+				url(../<?php echo PATH_SLIDE3 ?>) 1280px 0 no-repeat;
+			}
+	</style>
 	<link rel="shortcut icon" type="image/png" href="/favicon.jpg"/>
 </head>
 <body oncontextmenu="return false">
@@ -106,12 +118,12 @@ include_once 'languages/'.$lang_file;
 			<ul>
 			<center>
 				<li><a href="index.php?pag=home"><?php echo $lang['HOME']; ?></a></li>
-				<li><a href="index.php?pag=cadastro"><?php echo $lang['REGISTER']; ?></a></li>
+				<li><a href="index.php?pag=register"><?php echo $lang['REGISTER']; ?></a></li>
 				<li><a href="index.php?pag=info"><?php echo $lang['INFORMATION']; ?></a></li>
-				<li><a href="index.php?pag=galeria"><?php echo $lang['GALLERY']; ?></a></li>
+				<li><a href="index.php?pag=gallery"><?php echo $lang['GALLERY']; ?></a></li>
 				<li><a href="index.php?pag=downloads"><?php echo $lang['DOWNLOAD']; ?></a></li>
-				<li><a href="index.php?pag=doacoes"><?php echo $lang['DONATE']; ?></a></li>
-				<li><a href="index.php?pag=contato"><?php echo $lang['CONTACTS']; ?></a></li>
+				<li><a href="index.php?pag=donations"><?php echo $lang['DONATE']; ?></a></li>
+				<li><a href="index.php?pag=contacts"><?php echo $lang['CONTACTS']; ?></a></li>
 				<li><a href="#"><?php echo $lang['INFOTOP']; ?></a>
 					<ul>
 						<li><a href="index.php?pag=clan"><?php echo $lang['CLANINFO']; ?></a></li>
@@ -154,15 +166,15 @@ include_once 'languages/'.$lang_file;
 			<div class="c_slider"></div>
 			<div class="slider">
 				<figure>
-					<img src="_imagens/img/dummy-640x310-1.jpg" alt="" width="600" height="310" />
+					<img src="<?php echo PATH_SLIDE1 ?>" alt="" width="600" height="310" />
 					<figcaption><?php echo $lang['SLIDE1']; ?></figcaption>
 				</figure>
 				<figure>
-					<img src="_imagens/img/dummy-640x310-2.jpg" alt="" width="600" height="310" />
+					<img src="<?php echo PATH_SLIDE2 ?>" alt="" width="600" height="310" />
 					<figcaption><?php echo $lang['SLIDE2']; ?></figcaption>
 				</figure>
 				<figure>
-					<img src="_imagens/img/dummy-640x310-3.jpg" alt="" width="600" height="310" />
+					<img src="<?php echo PATH_SLIDE3 ?>" alt="" width="600" height="310" />
 					<figcaption><?php echo $lang['SLIDE3']; ?></figcaption>
 				</figure>
 			</div>
@@ -180,7 +192,7 @@ include_once 'languages/'.$lang_file;
 
 
 		      <?php
-			  $pro = 'proteção';
+			  $pro = 'protected';
 			  
 			  $pag = isset($_GET['pag']) ? $_GET['pag'] : 'home';
 			  $e = explode('/',$pag);
@@ -225,11 +237,11 @@ include_once 'languages/'.$lang_file;
                 <span class="admin"><span class="username"><?php echo $lang['RIGHT_WELCOME']; ?></span>  <?php echo $_SESSION[Servername."login"]; ?></span>
               <ul>	
             	<li><a href="index.php?pag=user"><?php echo $lang['RIGHT_MYACC']; ?></a></li>
-                <li><a href="index.php?pag=personagens"><?php echo $lang['RIGHT_MYCHARS']; ?></a></li>
+                <li><a href="index.php?pag=profile"><?php echo $lang['RIGHT_MYCHARS']; ?></a></li>
             	<li><a href="index.php?pag=change"><?php echo $lang['RIGHT_PASSCHANGE']; ?></a></li>
                 <li><a href="index.php?pag=confirm"><?php echo $lang['RIGHT_DONATEOK']; ?></a></li>
                 <li><a href="index.php?pag=report"><?php echo $lang['RIGHT_REPORT']; ?></a></li>
-                <li><a href="index.php?pag=sair"><?php echo $lang['LOGOUT']; ?></a></li>
+                <li><a href="index.php?pag=logout"><?php echo $lang['LOGOUT']; ?></a></li>
               </ul>      
             </div><!--login_menu-->
  			<?php
@@ -264,11 +276,11 @@ include_once 'languages/'.$lang_file;
 				while ($res_pvp = $pvp_sql->fetch(PDO::FETCH_ASSOC)) {
 
 				  if($i == 1){
-				    $img = "<img src=\"_imagens/top1.gif\" alt=\"\">";
+				    $img = "<img src=\"images/top1.gif\" alt=\"\">";
 				  }elseif($i == 2){
-				    $img = "<img src=\"_imagens/top2.gif\" alt=\"\">";
+				    $img = "<img src=\"images/top2.gif\" alt=\"\">";
 				  }elseif($i == 3){
-				    $img = "<img src=\"_imagens/top3.gif\" alt=\"\">";
+				    $img = "<img src=\"images/top3.gif\" alt=\"\">";
 				  }else{
 				    $img = $i."&ordm;";
 				  }
@@ -339,14 +351,14 @@ include_once 'languages/'.$lang_file;
 			<!--- VOTE BLOCK -->
 			<table class="ranking">
 			<tr>
-			<td><img name="HopeZone" alt="HopeZone" width="90" height="45" src="http://642507963.r.cdnsun.net/img/_vbanners/lineage2/lineage2-90x60-3.gif" /></td>
-			<td><img name="TopZone" alt="TopZone" width="90" height="45" src="http://l2topzone.com/105x48.png" /></td>
-			<td><img name="HopeZone" alt="HopeZone" width="90" height="45" src="http://www.top100arena.com/banner/big/big.jpg" /></td>
+			<td><a href="<?php echo SITE_VOTE1 ?>"><img name="<?php echo SITE_VNAME1 ?>" alt="<?php echo SITE_VNAME1 ?>" width="90" height="45" src="<?php echo PATH_VOTE1 ?>" /></a></td>
+			<td><a href="<?php echo SITE_VOTE2 ?>"><img name="<?php echo SITE_VNAME2 ?>" alt="<?php echo SITE_VNAME2 ?>" width="90" height="45" src="<?php echo PATH_VOTE2 ?>" /></a></td>
+			<td><a href="<?php echo SITE_VOTE3 ?>"><img name="<?php echo SITE_VNAME3 ?>" alt="<?php echo SITE_VNAME3 ?>" width="90" height="45" src="<?php echo PATH_VOTE3 ?>" /></a></td>
 			</tr>
 			<tr>
-			<td><img name="HopeZone" alt="HopeZone" width="90" height="45" src="http://www.topservers200.com/button/8989.png" /></td>
-			<td><img name="HopeZone" alt="HopeZone" width="90" height="45" src="http://l2network.eu/button.php?u=lineage2ertheia&buttontype=static" /></td>
-			<td><img name="HopeZone" alt="HopeZone" width="90" height="45" src="http://www.l2neo.com/display/images/brazil.png" /></td>
+			<td><a href="<?php echo SITE_VOTE4 ?>"><img name="<?php echo SITE_VNAME4 ?>" alt="<?php echo SITE_VNAME4 ?>" width="90" height="45" src="<?php echo PATH_VOTE4 ?>" /></a></td>
+			<td><a href="<?php echo SITE_VOTE5 ?>"><img name="<?php echo SITE_VNAME5 ?>" alt="<?php echo SITE_VNAME5 ?>" width="90" height="45" src="<?php echo PATH_VOTE5 ?>" /></a></td>
+			<td><a href="<?php echo SITE_VOTE6 ?>"><img name="<?php echo SITE_VNAME6 ?>" alt="<?php echo SITE_VNAME6 ?>" width="90" height="45" src="<?php echo PATH_VOTE6 ?>" /></a></td>
 			</tr>
 			</table>
 			
@@ -356,7 +368,7 @@ include_once 'languages/'.$lang_file;
 		</div>
 		<section class="cont-right">
 			<div id="poll">
-			<h2><center>Will you use Windows 10?</center></h2>
+			<h2><center><?php echo POLL_QUESTION ?></center></h2>
 			<form>
 			<table class="ranking">
 			<tr>
@@ -367,7 +379,7 @@ include_once 'languages/'.$lang_file;
 			</tr>
 			</table>
 			<br />
-			<center><input type="button" name="vote" class="btn" value="VOTE"><center>
+			<center><input type="button" name="vote" class="btn" value="<?php echo $lang['POLL_VOTE']; ?>"><center>
 			</form>
 			</div>
 		</section>
@@ -399,13 +411,10 @@ include_once 'languages/'.$lang_file;
 	</aside>
 
 	</div>
-	<!-- POR FAVOR NÃO REMORVER OS DIREITOS OU AUTORAIS OU ESTARAM QUEBRANDO AS LEIS DE PRIVACIDADE
-	INTELECTUAL PODENDO A VIR SER PROCESSADOS (O WEBSITE FOI FEITO GRATUITAMENTE NADA MAIS JUSTO QUE
-	DEIXAR OS DIREITOS INTACTOS. MUITO OBRIGADO)-->
-<!--	<footer id="rodape">
-		<p><?php echo $lang['CREDITS']; ?></p>
-	</footer> -->
 
+	<footer id="rodape">
+		<p><?php echo CREDITS ?></p>
+	</footer>
 </div>
 </body>
 </html>
@@ -414,10 +423,8 @@ include_once 'languages/'.$lang_file;
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-66154329-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 	<script type="text/javascript" src="_js/lightbox/js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="_js/lightbox/js/lightbox.js"></script>
@@ -425,7 +432,7 @@ include_once 'languages/'.$lang_file;
     <script type="text/javascript" src="_js/jquery.maskMoney.js" ></script>
     <script type="text/javascript">
         $(document).ready(function(){
-              $("input.dinheiro").maskMoney({showSymbol:true, symbol:"€", decimal:",", thousands:"."});
+              $("input.dinheiro").maskMoney({showSymbol:true, symbol:"ā‚¬", decimal:",", thousands:"."});
         });
     </script>
 	<script>
@@ -445,10 +452,8 @@ function getVote(int) {
   xmlhttp.send();
 }
 </script>
-
-
-    <script language="javascript">
-    document.onmousedown=disableclick;
+<script language="javascript">
+ 	document.onmousedown=disableclick;
     status="What are you trying to do here? Bad-boy!";
     function disableclick(event)
     {
@@ -458,4 +463,4 @@ function getVote(int) {
          return false;    
        }
     }
-    </script>
+</script>

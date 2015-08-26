@@ -408,17 +408,6 @@ left
 	transition: opacity 1s;
 }
 
-#slideshow .c_slider {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 400%;
-	height: 310px;
-	background: url(../_imagens/img/dummy-640x310-4.jpg) 0 0 no-repeat,
-		url(../_imagens/img/dummy-640x310-2.jpg) 600px 0 no-repeat,
-		url(../_imagens/img/dummy-640x310-3.jpg) 1280px 0 no-repeat;
-}
-
 .sl_i:target ~ #slideshow .c_slider {
 	-webkit-transition: background 1s;
 	-moz-transition: background 1s;
