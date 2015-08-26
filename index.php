@@ -408,6 +408,14 @@ include_once 'languages/'.$lang_file;
 
 			</div>
 		</section>
+		<div class="title-2">
+			<h2><center>Statics</center></h2>
+		</div>
+		<section class="cont-right">
+			<div id="statics">
+			<a href="http://info.flagcounter.com/UfWP"><img src="http://s06.flagcounter.com/count2/UfWP/bg_000000/txt_F7FDFF/border_381D38/columns_2/maxflags_10/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+			</div>
+		</section>
 	</aside>
 
 	</div>
