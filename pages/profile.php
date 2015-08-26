@@ -1,5 +1,5 @@
 <?php if(!isset($pro)){echo 'Protected page!'; exit;}; ?>
-<?php if(!isset($_SESSION[Servername."login"])){
+<?php if(!isset($_SESSION[SERVER_NAME."login"])){
 	echo '<div class="alert alert-danger">
         <strong>Access restricted!</strong> You must be loged in to see content!
     </div>';

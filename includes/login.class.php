@@ -9,14 +9,14 @@
 			$verifica->execute(array($usuario,$senha));
 			if($verifica->rowCount() >= 1){
 
-				$_SESSION[Servername."login"] = $usuario;
-				$_SESSION[Servername."senha"] = $senha;
+				$_SESSION[SERVER_NAME."login"] = $usuario;
+				$_SESSION[SERVER_NAME."senha"] = $senha;
 				$url = $_SERVER['REQUEST_URI'];
 				header("location: $url");
 
 			}else{
 			    echo '<div class="alert alert-danger">
-			            <strong>Erro ao Logar!</strong> Dados incorretos.
+			            <strong>Error!</strong> Incorect User/Password.
 			          </div>';
 			}
 		}

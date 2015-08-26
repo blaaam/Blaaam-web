@@ -1,11 +1,11 @@
 <?php if(!isset($pro)){echo 'Protected page!'; exit;};?>
-<?php if(!isset($_SESSION[Servername."login"])){
+<?php if(!isset($_SESSION[SERVER_NAME."login"])){
 	echo '<div class="alert alert-danger">
         <strong>Restricted access!</strong> You must be login to see the page.
     </div>';
 }else{?>
 		<hgroup>
-			<h2>Information Center</h2>
+			<h2>Password change</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

@@ -1,5 +1,5 @@
-<?php if(!isset($pro)){echo 'Página protegida!'; exit;};?>
-<?php if(!isset($_SESSION[Servername."login"])){
+<?php if(!isset($pro)){echo 'Protected Page!'; exit;};?>
+<?php if(!isset($_SESSION[SERVER_NAME."login"])){
 	echo '<div class="alert alert-danger">
         <strong>Acesso Restrito!</strong> Você precisa estar logado para acessar esta pagina.
     </div>';
@@ -80,7 +80,7 @@
 					$char_name =  strip_tags(trim($_POST['char_nome']));
 					$extensao = strtolower(end(explode('.',$arquivo['name'])));
 					$nome = md5(uniqid(rand())).".$extensao";
-					$pasta = "_upload/comprovantes/".$nome;
+					$pasta = "uploads/comprovantes/".$nome;
 					$permitido = array('image/png','image/jpg','image/jpeg','image/pjpeg');
 					$data = date('Y/m/d H:i:s');
 					

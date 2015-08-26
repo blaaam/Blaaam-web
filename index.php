@@ -234,7 +234,7 @@ include_once 'languages/'.$lang_file;
 			?>
             <div id="login_menu">
 
-                <span class="admin"><span class="username"><?php echo $lang['RIGHT_WELCOME']; ?></span>  <?php echo $_SESSION[Servername."login"]; ?></span>
+                <span class="admin"><span class="username"><?php echo $lang['RIGHT_WELCOME']; ?></span>  <?php echo $_SESSION[SERVER_NAME."login"]; ?></span>
               <ul>	
             	<li><a href="index.php?pag=user"><?php echo $lang['RIGHT_MYACC']; ?></a></li>
                 <li><a href="index.php?pag=profile"><?php echo $lang['RIGHT_MYCHARS']; ?></a></li>
