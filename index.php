@@ -366,6 +366,10 @@ include_once 'languages/'.$lang_file;
 		<div class="title-2">
 			<h2><center><?php echo $lang['RIGHT_POLL']; ?></center></h2>
 		</div>
+		<?php  
+			if(!isset($_SESSION[SERVER_NAME."login"]) && !isset($_SESSION[SERVER_NAME."senha"])){ echo '<div class="alert alert-danger">
+				        <strong>Sorry!</strong> You must be logged in to vote!
+				    </div>';} else {?>
 		<section class="cont-right">
 			<div id="poll">
 			<h2><center><?php echo POLL_QUESTION ?></center></h2>
@@ -383,6 +387,7 @@ include_once 'languages/'.$lang_file;
 			</form>
 			</div>
 		</section>
+			<?php }?>
 		<div class="title-2">
 			<h2><center><?php echo $lang['RIGHT_GALLERY']; ?></center></h2>
 		</div>
