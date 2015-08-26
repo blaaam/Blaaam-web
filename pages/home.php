@@ -28,14 +28,14 @@ if($destaque->rowCount() >= 1){
 		<ul class="boxposts_destaque">
 			<li>
 				<span class="thumb">
-					<img src="_imagens/shield.png" alt="" width="166" height="166"/>
+					<img src="images/shield.png" alt="" width="166" height="166"/>
 				</span>
 				<span class="content">
 					<h1><?php echo $res_destaque['titulo'];?></h1>
 					<p><?php echo $noticia; if(strlen($noticia) >= '310'){echo '...';}?></p>
 					<span class="datapost">By : <strong><?php echo $res_destaque['autor'];?></strong></span>
 					<div class="footerpost">
-							<a href="index.php?pag=noticias_destaque/<?php echo $res_destaque['id'] ?>">Read full story</a>
+							<a href="index.php?pag=read_news/<?php echo $res_destaque['id'] ?>">Read full story</a>
 							<span class="datapost">Added at: <strong><?php echo date('d/m/Y - H:i', strtotime($res_destaque['data']));?></strong></span>
 					</div>
 				</span>
@@ -46,7 +46,7 @@ if($destaque->rowCount() >= 1){
 <?php
 }
 }
-if(!isset($_SESSION[Servername."login"])){
+if(!isset($_SESSION[SERVER_NAME."login"])){
 $sql = $conexao->prepare("SELECT * FROM web_noticias WHERE destaque = '0' AND privado = '0' ORDER BY id DESC LIMIT $inicio,$maximo");
 }else{
 $sql = $conexao->prepare("SELECT * FROM web_noticias WHERE destaque = '0' ORDER BY id DESC LIMIT $inicio,$maximo");

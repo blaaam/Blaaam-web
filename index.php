@@ -3,7 +3,7 @@ session_start();
 include("config/connection.php");
 include("config/login.class.php");
 include("include/config.php");
-//include("functions/fun.php");
+include("functions/fun.php");
 $class = new login();
 ob_start();
 $manu = $conexao->prepare("SELECT manutencao FROM web_configs WHERE manutencao = 'false'");
@@ -198,8 +198,8 @@ include_once 'languages/'.$lang_file;
 			  $e = explode('/',$pag);
 			  $pg = $e[0];
 			  
-			 if(file_exists("_pags/$pg.php")){
-				include"_pags/$pg.php"; 
+			 if(file_exists("pages/$pg.php")){
+				include"pages/$pg.php"; 
 			  }else{
 				echo '<div class="alert alert-danger">
 			        <strong> echo $lang["404"]; </strong> echo $lang["MSG1"];
