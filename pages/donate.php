@@ -36,7 +36,7 @@ if($destaque->rowCount() >= 1){
 					<td class="nome"><span class="pname"><i><?php echo $res_destaque['name'];?></i></span></td>
 					<td class="preco"><span class="dprice"><i><?php echo $res_destaque['preco_antigo'];?></i></span></td>
 					<td class="preco"><span class="pprice"><i><?php echo $res_destaque['preco_atual'];?></i></span></td>
-					<td class="botao"><a href="index.php?pag=retirar-doacoes/<?php echo $res_destaque['id'] ?>">Make donation</a></td>
+					<td class="botao"><a href="index.php?pag=make_donation/<?php echo $res_destaque['id'] ?>">Make donation</a></td>
 				</tr>
 			</table>
 
@@ -79,14 +79,14 @@ while($res = $sql->fetch(PDO::FETCH_ASSOC)){
 	if($sql->rowCount() >= 1){
 	for($i = $pg-$links; $i <= $pg-1; $i++){
 		if($i <= 0){}else{
-			echo '<div class="prev"><a href="index.php?pag=doacoes/'.$i.'">Previus page</a></div>';		
+			echo '<div class="prev"><a href="index.php?pag=donate/'.$i.'">Previus page</a></div>';		
 		}	
 	}
 	}
 	
 	for($i = $pg+1; $i <= $pg+$links; $i++){
 		if($i > $paginas){}else{
-			echo '<div class="next"><a href="index.php?pag=doacoes/'.$i.'">Next page</a></div>';	
+			echo '<div class="next"><a href="index.php?pag=donate/'.$i.'">Next page</a></div>';	
 		}
 	}
 	

@@ -1,4 +1,4 @@
-<?php if(!isset($pro)){echo 'Página protegida!'; exit;}; 
+<?php if(!isset($pro)){echo 'Protected Page!'; exit;}; 
 	error_reporting(0);
 	$Pegaid = explode('/',$_GET['pag']);
 	$id = $Pegaid[1];
@@ -14,16 +14,15 @@
 	$res = $pega_noticia->fetch(PDO::FETCH_ASSOC);
 	
 	
-	if($res['privado'] == 1 && !isset($_SESSION[Servername."login"])){
+	if($res['privado'] == 1 && !isset($_SESSION[SERVER_NAME."login"])){
 			echo '<div class="alert alert-danger">
-		        <strong>Acesso Negado!</strong> Você não tem permissão para acessar esta página, para visualizar a mesma faça o login no painel do usuário, esta noticia é privada então
-			só mente usuários logados podem ler se você já tem seu login e sua senha basta logar, se não faça seu cadastro agora mesmo.
+		        <strong>Restricted access!</strong>You must register to access this page!
 		    </div>';
 	}else{
 	
 	if($pega_noticia->rowCount() == false){
 		echo '<div class="alert alert-danger">
-	        <strong>Página Inexistente!</strong> Selecione uma outra pagina.
+	        <strong>Page dont exists!</strong> Page you looking for dont exist!
 	    </div>';
 	}else{
 		echo "
@@ -32,21 +31,21 @@
 		<ul class=\"boxposts_destaque\">
 			<li>
 				<span class=\"thumb\">
-					<img src=\"_imagens/shield.png\" alt=\"\" width=\"166\" height=\"166\"/>
+					<img src=\"images/shield.png\" alt=\"\" width=\"166\" height=\"166\"/>
 				</span>
 				<span class=\"content\">
 					<h1>$res[titulo]</h1>
 					<p>$res[noticia]</p>
-							<span class=\"datapost\">Publicação: <strong>".date('d/m/Y - H:i', strtotime($res['data']))."</strong></span>
+							<span class=\"datapost\">Added at: <strong>".date('d/m/Y - H:i', strtotime($res['data']))."</strong></span>
 					<div class=\"footerpost\">
 
 
 		";
 		?>
-			<span class="post_autor">Postado por : <strong><?php echo $res['autor']; ?></strong></span>
+			<span class="post_autor">Posted by : <strong><?php echo $res['autor']; ?></strong></span>
 		<span class="datapost">
         <div id="curtir_conteudo">
-			<span class="datapost"><strong><?php echo $res[visitas]?> </strong>Visualizações</span>
+			<span class="datapost"><strong><?php echo $res[visitas]?> </strong>Views</span>
 
 
 		<?php } ?>

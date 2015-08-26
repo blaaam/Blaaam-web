@@ -1,4 +1,4 @@
-<?php if(!isset($pro)){echo 'Página protegida!'; exit;};?>
+<?php if(!isset($pro)){echo 'Protected Page!'; exit;};?>
 		<hgroup>
 			<h2>Centro de Downloads</h2>
 
@@ -63,74 +63,73 @@
 				</tr>
 				<tr>
 					<td rowspan="2" class="ce">System</td>
-					<td class="cd"><span><a href="<?php echo mega; ?>" target="_blank">Opção 1</a></span> Download via MEGA</td>
+					<td class="cd"><span><a href="<?php echo DOWNLOAD_SYS_1; ?>" target="_blank">Download</a></span> Download from MEGA</td>
 				</tr>
 				<tr>
-					<td class="cd"><span><a href="<?php echo mediafire; ?>" target="_blank">Opção 2</a></span> Download via MEDIAFIRE</td>
+					<td class="cd"><span><a href="<?php echo DOWNLOAD_SYS_2; ?>" target="_blank">Download</a></span> Download from MEDIAFIRE</td>
 				</tr>
 				<tr>
 					<td rowspan="2" class="ce">Animations</td>
-					<td class="cd"><span><a href="<?php echo mega2; ?>" target="_blank">Opção 1</a></span> Download via MEGA</td>
+					<td class="cd"><span><a href="<?php echo DOWNLOAD_ANIM_1; ?>" target="_blank">Download</a></span> Download from MEGA</td>
 				</tr>
 				<tr>
-					<td class="cd"><span><a href="<?php echo mediafire2; ?>" target="_blank">Opção 2</a></span> Download via MEDIAFIRE</td>
+					<td class="cd"><span><a href="<?php echo DOWNLOAD_ANIM_2; ?>" target="_blank">Download</a></span> Download from MEDIAFIRE</td>
 				</tr>
 				<tr>
 					<td rowspan="2" class="ce">Systextures</td>
-					<td class="cd"><span><a href="<?php echo mega3; ?>" target="_blank">Opção 1</a></span> Download via MEGA</td>
+					<td class="cd"><span><a href="<?php echo DOWNLOAD_SYSTEX_1; ?>" target="_blank">Download</a></span> Download from MEGA</td>
 				</tr>
 				<tr>
-					<td class="cd"><span><a href="<?php echo mediafire3; ?>" target="_blank">Opção 2</a></span> Download via MEDIAFIRE</td>
+					<td class="cd"><span><a href="<?php echo DOWNLOAD_SYSTEX_2; ?>" target="_blank">Download</a></span> Download from MEDIAFIRE</td>
 				</tr>
 				<tr>
 					<td rowspan="2" class="ce">Patch Full .exe</td>
-					<td class="cd"><span><a href="<?php echo mega4; ?>" target="_blank">Opção 1</a></span> Download via MEGA</td>
+					<td class="cd"><span><a href="<?php echo DOWNLOAD_FULL_EXE_1; ?>" target="_blank">Download</a></span> Download from MEGA</td>
 				</tr>
 				<tr>
-					<td class="cd"><span><a href="<?php echo mediafire4; ?>" target="_blank">Opção 2</a></span> Download via MEDIAFIRE</td>
+					<td class="cd"><span><a href="<?php echo DOWNLOAD_FULL_EXE_2; ?>" target="_blank">Download</a></span> Download from MEDIAFIRE</td>
 				</tr>
 				<tr>
 					<td rowspan="2" class="ce">Patch Full .rar</td>
-					<td class="cd"><span><a href="<?php echo mega5; ?>" target="_blank">Opção 1</a></span> Download via MEGA</td>
+					<td class="cd"><span><a href="<?php echo DOWNLOAD_FULL_RAR_1; ?>" target="_blank">Download</a></span> Download from MEGA</td>
 				</tr>
 				<tr>
-					<td class="cd"><span><a href="<?php echo mediafire5; ?>" target="_blank">Opção 2</a></span> Download via MEDIAFIRE</td>
+					<td class="cd"><span><a href="<?php echo DOWNLOAD_FULL_RAR_2; ?>" target="_blank">Download</a></span> Download from MEDIAFIRE</td>
 				</tr>
 				<tr>
 					<td rowspan="2" class="ce">Cliente Interlude</td>
-					<td class="cd"><span><a href="<?php echo mega6; ?>" target="_blank">Opção 1</a></span> Download via MEGA</td>
+					<td class="cd"><span><a href="<?php echo DOWNLOAD_CLIENT_1; ?>" target="_blank">Download</a></span> Download from MEGA</td>
 				</tr>
 				<tr>
-					<td class="cd"><span><a href="<?php echo mediafire6; ?>" target="_blank">Opção 2</a></span> Download via MEDIAFIRE</td>
+					<td class="cd"><span><a href="<?php echo DOWNLOAD_CLIENT_2; ?>" target="_blank">Download</a></span> Download from MEDIAFIRE</td>
 				</tr>
 			</table>
 <br>
 
 			<table class="donwload">
 				<tr>
-					<h2>Requisitos Minimos para Instalar e Jogar Lineage II Interlude</h2>
+					<h2>Minimum requrments for Lineage ][ Game Client</h2>
 				</tr>
 				<tr>
-					<td class="ce">Processador</td>
+					<td class="ce">Procesor</td>
 					<td class="cd">Pentium Dual Core</td>
 				</tr>
 				<tr>
-					<td rowspan="1" class="ce">Memoria RAM</td>
+					<td rowspan="1" class="ce">RAM</td>
 					<td class="cd"> 2GB </td>
 				</tr>
 				<tr>
-					<td rowspan="1" class="ce">Placa de Video</td>
+					<td rowspan="1" class="ce">Video card memory</td>
 					<td class="cd"> 256MB</td>
 				</tr>
 				<tr>
 					<td class="ce">HD (Hard Disk)</td>
-					<td class="cd"> 10GB Livre</td>
+					<td class="cd"> 10GB Free space</td>
 				</tr>
 				<tr>
-					<td class="ce">Conexão</td>
-					<td class="cd"> Internet Banda Larga</td>
+					<td class="ce">Connection</td>
+					<td class="cd"> Internet connection</td>
 				</tr>
 			</table>
 
 		</hgroup>
- 

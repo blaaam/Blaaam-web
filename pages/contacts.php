@@ -1,8 +1,9 @@
+<!-- This page will get improved later!  -->
 <article class="noticiario">
 	<hgroup class="title-news">
 		<h2>Comunique-se conosco</h2>
-		<p>Bem vindos ao <i><?php echo Title ?></i>. Criamos este formulario diminamico para envio de mensagem direcionada ao player, visitante e demais que estejam com necessidade de entrar em contato com o <i><?php echo Servername ?></i></i> </p><br>
-		<p>Para que voce possa estar se comunicando conosco, preencha todo o formulario abaixo com informações validas e totalmente relevante, para que possamos retornar seu contato com muita satisfação. Equipe <i><?php echo Servername ?></i> agradece desde já seu contato. Obrigado pela compreenção</p>
+		<p>Bem vindos ao <i><?php echo SERVER_NAME ?></i>. Criamos este formulario diminamico para envio de mensagem direcionada ao player, visitante e demais que estejam com necessidade de entrar em contato com o <i><?php echo SERVER_NAME ?></i></i> </p><br>
+		<p>Para que voce possa estar se comunicando conosco, preencha todo o formulario abaixo com informações validas e totalmente relevante, para que possamos retornar seu contato com muita satisfação. Equipe <i><?php echo SERVER_NAME ?></i> agradece desde já seu contato. Obrigado pela compreenção</p>
 
 <?php if(!isset($_COOKIE["pro"])){ ?>
  		<form action="" class="contato" method="post">
