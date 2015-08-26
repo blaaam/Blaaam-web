@@ -1,8 +1,8 @@
 <?php
 // Connect PHP PDO
 $host	= "localhost"; //IP da hospedagem, dedicado ou servidor Local
-$dbname	= ""; //Nome do banco de dados
-$user	= "";//usuario do Mysql (Padrao = root)
+$dbname	= "lineag2"; //Nome do banco de dados
+$user	= "root";//usuario do Mysql (Padrao = root)
 $senha	= "";//senha do mysql (padrao sem senha)
 //Para melhor segunrança coloque um nome de usuario bem dificil, e uma senha contendo numeros e letras
 
