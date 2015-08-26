@@ -314,11 +314,11 @@ include_once 'languages/'.$lang_file;
 				while ($res_pvp = $pvp_sql->fetch(PDO::FETCH_ASSOC)) {
 
 				  if($i == 1){
-				    $img = "<img src=\"_imagens/top1.gif\" alt=\"\">";
+				    $img = "<img src=\"images/top1.gif\" alt=\"\">";
 				  }elseif($i == 2){
-				    $img = "<img src=\"_imagens/top2.gif\" alt=\"\">";
+				    $img = "<img src=\"images/top2.gif\" alt=\"\">";
 				  }elseif($i == 3){
-				    $img = "<img src=\"_imagens/top3.gif\" alt=\"\">";
+				    $img = "<img src=\"images/top3.gif\" alt=\"\">";
 				  }else{
 				    $img = $i."&ordm;";
 				  }
