@@ -27,7 +27,10 @@ THE WEBSITE IS PREATY SHITTY SO IF YOU ARE WEB DESIGNER WHO WOULD LIKE TO HELP, 
 #DEMO 
 http://l2ertheia.tk OR http://l2kalev.tk
 
+USER : demo
+PASS : demo
 
+Back-office will be avalible latter!
 
 
 #WHAT NOW? LETS DRINK SOME BEER! 
