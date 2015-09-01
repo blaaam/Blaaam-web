@@ -1,5 +1,8 @@
 eclipse.preferences.version=1
 encoding//admin/index.php=UTF-8
+encoding//admin/pages/donations.php=UTF-8
+encoding//admin/pages/donations_list.php=UTF-8
+encoding//admin/pages/reported.php=UTF-8
 encoding//pages/confirm.php=UTF-8
 encoding//pages/contacts.php=UTF-8
 encoding//pages/report.php=UTF-8

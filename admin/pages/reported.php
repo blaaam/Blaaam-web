@@ -1,4 +1,4 @@
-<?php if(!isset($pros)){echo 'Pagina Protegida'; exit;};?>
+<?php if(!isset($pros)){echo 'Protected page'; exit;};?>
 			<table class="doacoes" width="1076">
 				<tr>
 					<th class="icon">Login</td>
@@ -17,7 +17,7 @@
 	$array = $select->fetchAll(PDO::FETCH_ASSOC);
 	if($select->rowCount() <= 0){
 			echo '<div class="alert alert-danger">
-			    <strong>Erro!</strong> Nenhum comprovante de doação! </a>
+			    <strong>Erro!</strong> Nenhum comprovante de doaĆ§Ć£o! </a>
 			</div>';
 	}
 
@@ -30,7 +30,7 @@
 					<td class="preco"><span class="pname"><?php echo $res['reported_login'];?></i></span></td>
 					<td class="preco"><span class="dprice"><i><?php echo $res["motivo"];?></i></span></td>
 					<td class="nome"><span class="pprice"><i><?php echo $res["descricao"] ?></i></span></td>
-					<td class="botao"><a href="../_upload/reportados/<?php echo $res["imagem"] ?>" id="deletar2">Clique Aqui</a></td>
+					<td class="botao"><a href="../uploads/reportados/<?php echo $res["imagem"] ?>" id="deletar2">Clique Aqui</a></td>
 				</tr>
 			</table>
 
@@ -47,14 +47,14 @@
 	if($select->rowCount() >= 1){
 	for($i = $pag-$links; $i <= $pag-1; $i++){
 		if($i <= 0){}else{
-			echo "<a class=\"btn-d2\" href=\"?p=reportados&pag=$i\"><span class=\"glyphicon glyphicon-chevron-left\"></span> Página Anterior</a>";	
+			echo "<a class=\"btn-d2\" href=\"?p=reported&pag=$i\"><span class=\"glyphicon glyphicon-chevron-left\"></span> PĆ�gina Anterior</a>";	
 		}	
 	}
 	}
 	
 	for($i = $pag+1; $i <= $pag+$links; $i++){
 		if($i > $paginas){}else{
-			echo "<a class=\"btn-d2\" href=\"?p=reportados&pag=$i\">Proxima Página <span class=\"glyphicon glyphicon-chevron-right\"></span> </a>";	
+			echo "<a class=\"btn-d2\" href=\"?p=reported&pag=$i\">Proxima PĆ�gina <span class=\"glyphicon glyphicon-chevron-right\"></span> </a>";	
 		}
 	}
 

@@ -44,7 +44,7 @@ if(isset($_POST['nbs']) && $_POST['nbs'] == 'ok'){
     $alterar_nobre->bindValue(':char_name', $nb_nome, PDO::PARAM_STR);
     $alterar_nobre->execute();
     setcookie("change", time(), time()+3600); 
-    header("location: ?p=nobre");
+    header("location: ?p=nobless");
 
 
   }

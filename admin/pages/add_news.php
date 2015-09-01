@@ -1,4 +1,4 @@
-<?php if(!isset($pros)){echo 'Pagina Protegida'; exit;};?>
+<?php if(!isset($pros)){echo 'Protected Page'; exit;};?>
 
 <form action="" method="post">
 
@@ -70,7 +70,7 @@
 			$posta->bindValue(':privar',$privar,PDO::PARAM_STR);
 			$posta->execute();
 	        setcookie("notice", time(), time()+3600);
-	        header("location: ?p=notice");
+	        header("location: ?p=add_news");
 			
 			$recuperar = $conexao->prepare("SELECT id FROM web_noticias WHERE titulo = (:titulo) and autor = (:autor) and noticia = (:noticia) ORDER BY id DESC");
 			$recuperar->bindValue(':titulo',$titulo,PDO::PARAM_STR);

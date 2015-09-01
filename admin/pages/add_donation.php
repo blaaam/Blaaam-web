@@ -82,7 +82,7 @@
 			$add_etc->bindValue(':promocao', $promocao, PDO::PARAM_STR);
 			$add_etc->execute();
 	        setcookie("doacao", time(), time()+3600);
-	        header("location: ?p=adicionar_doacao");
+	        header("location: ?p=add_donation");
  		}
 	}//ISSET
 

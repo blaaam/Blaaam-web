@@ -23,7 +23,7 @@
 		$deleta = $conexao->prepare("DELETE FROM web_doacoes WHERE id = (:id)");
 		$deleta->bindValue(':id',intval($_GET['id']),PDO::PARAM_STR);
 		$deleta->execute();
-		header("location: ?p=listar-doacoes");
+		header("location: ?p=donations_list");
 	}
 	
 	if(isset($_GET["action"])&& $_GET["action"] == 'editar'){
@@ -59,7 +59,7 @@
 	$seleciona->execute();
 	if($seleciona->rowCount() <= 0){
 		    echo '<div class="alert alert-danger">
-		            <strong>Erro listar Doação!</strong> Não há doações.
+		            <strong>Erro listar DoaĆ§Ć£o!</strong> NĆ£o hĆ� doaĆ§Ćµes.
 		          </div>';
 	}else{
 	
@@ -68,12 +68,12 @@
     
 			<table class="doacoes" width="1076">
 				<tr>
-					<td class="icon"><img src="../_imagens/itens/<?php echo $res['item_id'];?>.png" alt=""/></td>
+					<td class="icon"><img src="/images/items/<?php echo $res['item_id'];?>.png" alt=""/></td>
 					<td class="nome"><span class="pname"><i><?php echo $res['name'];?></i></span></td>
 					<td class="preco"><span class="dprice"><i><?php echo $res['preco_antigo'];?></i></span></td>
 					<td class="preco"><span class="pprice"><i><?php echo $res['preco_atual'];?></i></span></td>
 					<td class="preco"><span class="pprice"><i><?php echo $res['promocao'];?></i></span></td>
-					<td class="botao"><a href="?p=listar-doacoes&action=deletar&id=<?php echo $res['id'];?>" id="deletar2"><span class="glyphicon glyphicon-remove"></span>  Delete</a></td>
+					<td class="botao"><a href="?p=donation_list&action=deletar&id=<?php echo $res['id'];?>" id="deletar2"><span class="glyphicon glyphicon-remove"></span>  Delete</a></td>
 				</tr>
 			</table>
 
@@ -101,14 +101,14 @@
 	if($seleciona->rowCount() >= 1){
 		for($i = $pg-$link; $i <= $pg-1;$i++){
 		if($i <= 0){}else{
-			echo '<a class="btn-d2" href="?p=listar-doacoes&pg='.$i.'">Previus Page</a>';	
+			echo '<a class="btn-d2" href="?p=donations&pg='.$i.'">Previus Page</a>';	
 		}	
 	}
 	}
 	
 	for($i = $pg+1; $i <= $pg+$link; $i++){
 		if($i > $paginas){}else{
-		echo '<a class="btn-d2" href="?p=listar-doacoes&pg='.$i.'">Next page</a>';	
+		echo '<a class="btn-d2" href="?p=donations_list&pg='.$i.'">Next page</a>';	
 		}
 	}
 	

@@ -35,8 +35,8 @@
 					<td class="preco"><span class="pprice"><i><?php echo $res["nome"] ?></i></span></td>
 					<td class="preco"><span class="pprice"><i><?php echo count(explode(',',$res['itens']));?></i></span></td>
 					<td class="nome"><span class="pname"><?php echo $res["itens"];?></i></span></td>
-					<td class="preco"><span class="pprice"><i><?php echo date("d/m/y", strtotime($res["data"]));?> ás <?php echo date("H:i", strtotime($res["data"]));?></i></span></td>
-					<td class="preco"><a href="../_upload/comprovantes/<?php echo $res["comprovante"] ?>" id="deletar2"><span class="glyphicon glyphicon-share-alt"></span> Click here</a></td>
+					<td class="preco"><span class="pprice"><i><?php echo date("d/m/y", strtotime($res["data"]));?> Ć�s <?php echo date("H:i", strtotime($res["data"]));?></i></span></td>
+					<td class="preco"><a href="../uploads/comprovantes/<?php echo $res["comprovante"] ?>" id="deletar2"><span class="glyphicon glyphicon-share-alt"></span> Click here</a></td>
 				</tr>
 			</table>
 

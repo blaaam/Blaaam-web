@@ -2,6 +2,6 @@
 
 session_start();
 unset($_SESSION["logins"]);
-header("location: ../_admin");
+header("location: ../admin");
 
 ?>

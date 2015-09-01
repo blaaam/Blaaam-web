@@ -49,7 +49,7 @@
 		$insert->bindValue(':destaque',$destaque,PDO::PARAM_STR);
 		$insert->execute();
         setcookie("foto", time(), time()+3600);
-        header("location: ?p=screen");
+        header("location: ?p=add_screen");
 
 	}else{
 		    echo '<div class="alert alert-danger">

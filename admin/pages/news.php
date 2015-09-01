@@ -13,7 +13,7 @@
 		$deleta->execute();
 		$curtir_delete = $conexao->prepare("DELETE FROM web_curtir WHERE post_id = ?");
 		$curtir_delete->execute(array($_GET["id"]));
-		header("location: ?p=listar");
+		header("location: ?p=news");
 	}
 	
 	if(isset($_GET["action"])&& $_GET["action"] == 'editar'){
@@ -73,7 +73,7 @@
 		$altera->bindValue(':destaque',$_POST["destaque"],PDO::PARAM_STR);
 		$altera->bindValue(':privado',$_POST["privar"],PDO::PARAM_STR);
 		$altera->execute();
-		header("location: ?p=listar");	
+		header("location: ?p=news");	
 	}
 	
 	exit;	
