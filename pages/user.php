@@ -8,7 +8,7 @@
 <table class="ranking">
 	<tr>
 		<tr><td>Characters in account:</td><td> <?php echo $user->rowCount(); ?></td></tr>
-		<tr><td>Accesslevel:</td><td> <?php echo number_format($res_user['accessLevel']); ?></td></tr>
+		<tr><td>Accesslevel:</td><td> <?php if ($res_user['accessLevel'] =="0") { echo 'User';} else { echo 'Other';} ?></td></tr>
 		<tr><td>Last IP:</td><td> <?php echo $res_user['lastIP'] ?></td></tr>
 		<tr><td>Last Server:</td><td> <?php if ($res_user['lastServer'] =="1") { echo 'Bartz';} else { echo 'Unknown';} ?></td></tr>
 		<tr><td>Email:</td><td> <?php echo $res_user['email'] ?></td></tr>
