@@ -30,7 +30,7 @@
 		$tamanho = number_format($tamanho)." MB";	
 	}
 	$name = time().".$extensao";
-	$pasta = "../_upload/galeria/$name";
+	$pasta = "../uploads/gallery/$name";
 	
 	$permitido = array('image/jpg','image/png','image/jpeg','image/pjpeg','image/gif','image/bmp');
 	
@@ -44,7 +44,7 @@
 	if($upload){
 		$insert = $conexao->prepare("INSERT INTO web_galeria (titulo,url,tamanho,destaque) VALUES (:titulo,:url,:tamanho,:destaque)");	
 		$insert->bindValue(':titulo',$titulo,PDO::PARAM_STR);
-		$insert->bindValue(':url',"_upload/galeria/$name",PDO::PARAM_STR);
+		$insert->bindValue(':url',"uploads/gallery/$name",PDO::PARAM_STR);
 		$insert->bindValue(':tamanho',$tamanho,PDO::PARAM_STR);
 		$insert->bindValue(':destaque',$destaque,PDO::PARAM_STR);
 		$insert->execute();

@@ -120,7 +120,7 @@ if(isset($_POST['cadastrar'])){
         $cadastrar->bindValue(':email', $email, PDO::PARAM_STR);
         $cadastrar->execute();
         setcookie("cadastrou", time(), time()+3600);
-        header("location: index.php?pag=cadastro");
+        header("location: index.php?pag=register");
 
 
       }

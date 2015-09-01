@@ -1,6 +1,6 @@
 <?php
-include"../_config/conexao.php";
-include"../_config/configuracoes.php";
+include"../includes/connection.php";
+include"../includes/config.php";
 ?>
 <?php
 ob_start();
@@ -14,7 +14,7 @@ session_start();
 	<link rel="stylesheet" href="css/estilo.css" />
 	<link rel="stylesheet" href="../_css/classes.css" />
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-	<title><?php echo Servername ?></title>
+	<title><?php echo SERVER_NAME ?></title>
 	<script type="text/javascript" src="scripts/jscripts/jquery.js"/>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 </head>
@@ -169,8 +169,8 @@ session_start();
 				$p = $_GET['p'];	
 			}
 			
-			if(file_exists("paginas/$p.php")){
-				include"paginas/$p.php";	
+			if(file_exists("pages/$p.php")){
+				include"pages/$p.php";	
 			}
 			
 			?>
