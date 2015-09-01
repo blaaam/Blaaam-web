@@ -12,7 +12,7 @@ session_start();
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="css/estilo.css" />
-	<link rel="stylesheet" href="../_css/classes.css" />
+	<link rel="stylesheet" href="../css/classes.css" />
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	<title><?php echo SERVER_NAME ?></title>
 	<script type="text/javascript" src="scripts/jscripts/jquery.js"/>
@@ -186,8 +186,8 @@ session_start();
 
 <!-- TinyMCE -->
 <script type="text/javascript" src="scripts/jscripts/tiny_mce/tiny_mce.js"></script>
-    <script type="text/javascript" src="../_js/jquery.js" ></script>
-    <script type="text/javascript" src="../_js/jquery.maskMoney.js" ></script>
+    <script type="text/javascript" src="../js/jquery.js" ></script>
+    <script type="text/javascript" src="../js/jquery.maskMoney.js" ></script>
     <script type="text/javascript">
         $(document).ready(function(){
               $("input.dinheiro").maskMoney({showSymbol:true, symbol:"R$", decimal:",", thousands:"."});
