@@ -1,6 +1,18 @@
 <?php
 include"../includes/connection.php";
 include"../includes/config.php";
+
+$whitelist = array('192.168.87.1', '80.233.181.154');
+if (in_array($_SERVER['REMOTE_ADDR'], $whitelist)) {
+    //Action for allowed IP Addresses
+} else {
+    //Action for all other IP Addresses
+    echo 'You are not authorized here. Bad-boy!'; 
+    echo "<br />IP Address: ".$_SERVER['REMOTE_ADDR'];
+    exit;
+}
+
+
 ?>
 <?php
 ob_start();

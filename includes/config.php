@@ -61,7 +61,9 @@
 // define ("", "");
 
 
+// ADMIN ACCESS ( EDIT TO ACCESS BACK-OFFICE
 
+$whitelist = array('localhost', '');
 
 $item_id = "item_id"; // From old configuration file (Original = $item_id = 'item_id';)
 
