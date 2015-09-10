@@ -1,15 +1,10 @@
 <?php
-####### db config ##########
-$db_username = 'xxxx';
-$db_password = 'xxxx';
-$db_name = 'xxxx';
-$db_host = 'localhost';
-####### db config end ##########
+include("includes/connection.php");
 
 if($_POST)
 {
 	//connect to mysql db
-	$sql_con = mysqli_connect($db_host, $db_username, $db_password,$db_name)or die('could not connect to database');
+	$sql_con = mysqli_connect($host, $user, $senha,$dbname)or die('could not connect to database');
 	
 	//check if its an ajax request, exit if not
     if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
