@@ -4,11 +4,7 @@
 </head>
 <body>
 <?php
-<<<<<<< HEAD
-// full path to login file
-=======
 // full path to text file
->>>>>>> branch 'master' of https://github.com/blaaam/L2JMOBIUS_WEB.git
 define("PATH_GAMESERVER", "C:/Users/Autonets/Desktop/lineage2/lineage2/game/log/java0.log");
 $filename = (PATH_GAMESERVER);
 // number of lines to read from the end of file
