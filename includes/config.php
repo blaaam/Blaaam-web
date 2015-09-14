@@ -61,7 +61,7 @@
 // define ("", "");
 
 
-// ADMIN ACCESS ( EDIT TO ACCESS BACK-OFFICE
+// ADMIN ACCESS ( EDIT TO ACCESS BACK-OFFICE )
 
 $whitelist = array('localhost', '');
 
