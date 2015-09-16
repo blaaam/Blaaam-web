@@ -193,7 +193,11 @@ while($row = mysqli_fetch_assoc($result)){
 				<td>Max enchant rate for your server :</td>
 				<td><input type="text" name="MAX_ENCHANT" value="<?php echo $row["MAX_ENCHANT"] ?>"></td>
 			</tr>
+<<<<<<< HEAD
 			</table><br />
+=======
+			</table>
+>>>>>>> branch 'master' of https://github.com/blaaam/L2JMOBIUS_WEB.git
 			<center><h2>DATABASE CONFIGURATION</h2></center><br />
 			<table>
 			<tr>	
