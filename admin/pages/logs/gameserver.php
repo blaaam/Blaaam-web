@@ -6,7 +6,6 @@
 <?php
 include"../../../includes/config.php";
 // full path to text file
-define("PATH_GAMESERVER", "C:/Users/Autonets/Desktop/lineage2/lineage2/game/log/java0.log");
 $filename = PATH_GAMESERVER;
 // number of lines to read from the end of file
 define("LINES_COUNT", 100);
