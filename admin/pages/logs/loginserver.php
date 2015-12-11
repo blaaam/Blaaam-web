@@ -4,9 +4,9 @@
 </head>
 <body>
 <?php
+include"../../../includes/config.php";
 // full path to login file
-define("PATH_LOGINSERVER", "C:/Users/Autonets/Desktop/lineage2/lineage2/login/log/java0.log");
-$filename = (PATH_LOGINSERVER);
+$filename = PATH_LOGINSERVER;
 // number of lines to read from the end of file
 define("LINES_COUNT", 100);
 
