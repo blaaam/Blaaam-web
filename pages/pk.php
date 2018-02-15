@@ -10,10 +10,10 @@
   </tr>
   <?php
   $i = 1;
- $sql = $conexao->prepare("SELECT *,(SELECT clan_name FROM clan_data WHERE c.clanid = clan_id) AS clan from characters AS c where accesslevel = '0' order by pkkills DESC LIMIT 25");
+ $sql = $conexao->prepare("SELECT *,(SELECT clan_id FROM clan_data WHERE c.clanid = clan_id) AS clan from characters AS c where accesslevel = '0' order by pkkills DESC LIMIT 25");
  $sql->execute();
  while($res = $sql->fetch(PDO::FETCH_ASSOC)){
-	 $clan = empty($res['clan']) ? 'Não Possui Clan' : $res['clan'];
+	 $clan = empty($res['clan']) ? 'No Clan' : $res['clan'];
 
   if($i == 1){
     $img = "<img src=\"images/top1.gif\" alt=\"\">";
