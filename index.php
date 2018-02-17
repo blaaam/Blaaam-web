@@ -11,8 +11,8 @@ $manu = $conexao->prepare("SELECT manutencao FROM web_configs WHERE manutencao =
 $manu->execute();
 if($manu->rowCount() == true && !isset($_SESSION['login'])){
 	$manu_pro = '';
-	include"_pags/manu.php";
-	echo '<title>Site is in Maintance mode!Please come and visit us in few minutes!</title>';
+	include"pages/maintenance.php";
+	echo '<title>Site is in Maintenance mode!Please come and visit us in few minutes!</title>';
 	exit;	
 }
 
@@ -253,10 +253,10 @@ $('.toggle_chat').css('display','none');
 			<li><?php echo $lang['BAR_ADENA']; ?><strong><?php echo RATE_ADENA ?>x</strong></li>
 			<li><?php echo $lang['BAR_SPOIL']; ?><strong><?php echo RATE_SPOIL ?>x</strong></li>
 			<li><?php echo $lang['BAR_ON']; ?><strong><?php print $online->rowCount(); ?></strong></li>
-			<li><a href="http://l2kalev.tk/index.php?lang=en"><img name="English" alt="English" src="/languages/gb.gif" width="16" height="11" /></a>&nbsp;</li>
-			<li><a href="http://l2kalev.tk/index.php?lang=br"><img name="Brasil" alt="Brasil" src="/languages/BR.png" width="16" height="11" /></a>&nbsp;</li>
-			<li><a href="http://l2kalev.tk/index.php?lang=lv"><img name="Latvian" alt="Latvian" src="/languages/lv.png" width="16" height="11" /></a>&nbsp;</li>
-			<li><a href="http://l2kalev.tk/index.php?lang=ru"><img name="Russian" alt="Russian" src="/languages/ru.gif" width="16" height="11" /></a>&nbsp;</li>
+			<li><a href="<?php echo $lang['SITE_URL']; ?>/index.php?lang=en"><img name="English" alt="English" src="/languages/gb.gif" width="16" height="11" /></a>&nbsp;</li>
+			<li><a href="<?php echo $lang['SITE_URL']; ?>/index.php?lang=br"><img name="Brasil" alt="Brasil" src="/languages/BR.png" width="16" height="11" /></a>&nbsp;</li>
+			<li><a href="<?php echo $lang['SITE_URL']; ?>/index.php?lang=lv"><img name="Latvian" alt="Latvian" src="/languages/lv.png" width="16" height="11" /></a>&nbsp;</li>
+			<li><a href="<?php echo $lang['SITE_URL']; ?>/index.php?lang=ru"><img name="Russian" alt="Russian" src="/languages/ru.gif" width="16" height="11" /></a>&nbsp;</li>
 		</ul>
 </div>
 </div>
@@ -420,7 +420,8 @@ $('.toggle_chat').css('display','none');
 				</tr>
 			<?php  
 				$i =1;
-				$pvp_sql = $conexao->prepare("SELECT char_name,pkkills,level FROM characters WHERE accesslevel = '0' ORDER BY pkkills DESC LIMIT 3");
+				#Removing Level from query 
+				$pvp_sql = $conexao->prepare("SELECT char_name,pkkills FROM characters WHERE accesslevel = '0' ORDER BY pkkills DESC LIMIT 3");
 				$pvp_sql->execute();
 				while ($res_pvp = $pvp_sql->fetch(PDO::FETCH_ASSOC)) {
 
@@ -458,7 +459,8 @@ $('.toggle_chat').css('display','none');
 				</tr>
 			<?php  
 				$i =1;
-				$pvp_sql = $conexao->prepare("SELECT char_name,pvpkills,level FROM characters WHERE accesslevel = '0' ORDER BY pvpkills DESC LIMIT 3");
+				#Removing Level from query 
+				$pvp_sql = $conexao->prepare("SELECT char_name,pvpkills FROM characters WHERE accesslevel = '0' ORDER BY pvpkills DESC LIMIT 3");
 				$pvp_sql->execute();
 				while ($res_pvp = $pvp_sql->fetch(PDO::FETCH_ASSOC)) {
 

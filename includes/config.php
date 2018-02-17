@@ -1,9 +1,9 @@
 <?php 
 
 //  CONFIGS
- define ("PATH_LOGINSERVER", "C:/"); // Path to Login server log file
- define ("PATH_GAMESERVER", "C:/"); // Path to Game server log file
- define ("SERVER_NAME", "L2ERTHEIA"); // Write your server name here
+ define ("PATH_LOGINSERVER", "../home/h5/loginserver/log/stdout.log"); // Path to Login server log file
+ define ("PATH_GAMESERVER", "../home/h5/gameserver/log/stdout.log"); // Path to Game server log file
+ define ("SERVER_NAME", "Lineage 2 Adventure"); // Write your server name here
  define ("RATE_XP", "100"); // Server rate XP, will be displayed in top-bar at web pages
  define ("RATE_SP", "100"); // Server rate SP, will be displayed in top-bar at web pages
  define ("RATE_DROP", "3"); // Server rate DROP, will be displayed in top-bar at web pages
@@ -44,14 +44,15 @@
  define ("DOWNLOAD_FULL_RAR_2", "#"); // Site to download full patch archived mirror 2
  define ("DOWNLOAD_CLIENT_1", "#"); // Site to download game client mirror 1
  define ("DOWNLOAD_CLIENT_2", "#"); // Site to download game client mirror 2
- define ("SITE_TITLE", "This is my L2 Server"); // Title for meta tag 
+ define ("SITE_TITLE", "Lineage 2 Adventure"); // Title for meta tag 
  define ("SITE_EMAIL", "mail@gmail.com"); // Site e-mail
+ define ("SITE_URL", "http://l2adventure.tk"); // Site URL
  define ("item_id", "item_id"); // Database (Will add more of database entry's here)
  define ("DropItemId", "57"); // Not sure where this is used, will check later!
  define ("MAX_ENCHANT", "25"); // Max enchant rate for your server
  define ("SITE_DESCRIPTION", "");
  define ("SITE_KEYWORDS", "");
- define ("SITE_AUTHOR", "");
+ define ("SITE_AUTHOR", "SmokeY");
  define ("POLL_QUESTION", "Will you use Windows 10?");
  define ("POLL_ANSWER1", "Yes, i will use it!");
  define ("POLL_ANSWER2", "No, im scared of it!");

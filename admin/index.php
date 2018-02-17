@@ -2,7 +2,7 @@
 include"../includes/connection.php";
 include"../includes/config.php";
 
-$whitelist = array('192.168.87.1', '80.233.181.154');
+$whitelist = array('172.68.182.171', '213.226.141.225');
 if (in_array($_SERVER['REMOTE_ADDR'], $whitelist)) {
     //Action for allowed IP Addresses
 } else {
@@ -55,7 +55,7 @@ session_start();
 				
 				try{
 					
-					$verifica = $conexao->prepare("SELECT * FROM accounts WHERE login = (:login) AND password = (:senha) AND (accessLevel = '1')");
+					$verifica = $conexao->prepare("SELECT * FROM accounts WHERE login = (:login) AND password = (:senha) AND (access_level = '1')");
 					$verifica->bindValue(':login',$login,PDO::PARAM_STR);
 					$verifica->bindValue(':senha',$senha,PDO::PARAM_STR);
 					$verifica->execute();

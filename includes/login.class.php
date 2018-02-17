@@ -2,7 +2,7 @@
 	class login{
 		private $tabela = 'accounts';
 		private $accesslevel = '1';
-		private $colunaacesslevel = 'accesslevel';
+		private $colunaacesslevel = 'access_level';
 
 		function logar($usuario,$senha,$conexao){
 			$verifica = $conexao->prepare("SELECT * FROM $this->tabela WHERE login =? AND password = ?");
