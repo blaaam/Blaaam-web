@@ -18,7 +18,7 @@
       $cl->execute();
       $clan = $cl->fetch(PDO::FETCH_ASSOC);
 
-      $l = $conexao->prepare("SELECT * FROM characters WHERE charId = '".$clan['leader_id']."'");
+      $l = $conexao->prepare("SELECT * FROM characters WHERE obj_Id = '".$clan['leader_id']."'");
       $l->execute();
       $lord = $l->fetch(PDO::FETCH_ASSOC);
   ?>

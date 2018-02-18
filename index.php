@@ -376,7 +376,7 @@ $('.toggle_chat').css('display','none');
 				<input type="password" name="senha" id="senha" placeholder="<?php echo $lang['RIGHT_EPASS']; ?>"/>
 				<input type="submit" name="logar_usuario" id="cadastrar" class="btn-cadastrar" value="<?php echo $lang['LOGIN']; ?>"/>
 			</form>
-			<a href="index.php?pag=cadastro" class="btn-cad"><i><?php echo $lang['RIGHT_REGISTER']; ?></i></a><br>
+			<a href="index.php?pag=register" class="btn-cad"><i><?php echo $lang['RIGHT_REGISTER']; ?></i></a><br>
 			<a href="index.php?pag=recover" class="btn-cad"><i><?php echo $lang['RIGHT_FPASS']; ?></i></a>
 			<?php  
 			}else{
@@ -400,7 +400,7 @@ $('.toggle_chat').css('display','none');
 			<?php  
 			if(isset($_POST['logar_usuario'])){
 				$login = trim(strip_tags($_POST['usuario']));
-				$senha = base64_encode(pack("H*", sha1($_POST['senha'])));
+				$senha = $_POST['senha'];
 
 				$class->logar($login,$senha,$conexao);
 			}	
@@ -420,8 +420,7 @@ $('.toggle_chat').css('display','none');
 				</tr>
 			<?php  
 				$i =1;
-				#Removing Level from query 
-				$pvp_sql = $conexao->prepare("SELECT char_name,pkkills FROM characters WHERE accesslevel = '0' ORDER BY pkkills DESC LIMIT 3");
+				$pvp_sql = $conexao->prepare("SELECT char_name,pkkills,(SELECT level FROM character_subclasses WHERE characters.obj_Id = char_obj_id) AS level FROM characters WHERE accesslevel = '0' ORDER BY pkkills DESC LIMIT 3");
 				$pvp_sql->execute();
 				while ($res_pvp = $pvp_sql->fetch(PDO::FETCH_ASSOC)) {
 
@@ -459,8 +458,7 @@ $('.toggle_chat').css('display','none');
 				</tr>
 			<?php  
 				$i =1;
-				#Removing Level from query 
-				$pvp_sql = $conexao->prepare("SELECT char_name,pvpkills FROM characters WHERE accesslevel = '0' ORDER BY pvpkills DESC LIMIT 3");
+				$pvp_sql = $conexao->prepare("SELECT char_name,pvpkills,(SELECT level FROM character_subclasses WHERE characters.obj_Id = char_obj_id) AS level FROM characters WHERE accesslevel = '0' ORDER BY pvpkills DESC LIMIT 3");
 				$pvp_sql->execute();
 				while ($res_pvp = $pvp_sql->fetch(PDO::FETCH_ASSOC)) {
 
@@ -612,7 +610,7 @@ $('.toggle_chat').css('display','none');
 
     <script type="text/javascript">
         $(document).ready(function(){
-              $("input.dinheiro").maskMoney({showSymbol:true, symbol:"ā‚¬", decimal:",", thousands:"."});
+              $("input.dinheiro").maskMoney({showSymbol:true, symbol:"Äâ€šÂ¬", decimal:",", thousands:"."});
         });
     </script>
 	<script>

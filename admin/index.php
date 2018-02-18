@@ -51,7 +51,7 @@ session_start();
 			if(isset($_POST['logarse'])){
 					
 				$login = $_POST['login'];
-				$senha = base64_encode(pack('H*', sha1($_POST['senha'])));	
+				$senha = $_POST['senha'];	
 				
 				try{
 					

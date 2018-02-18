@@ -1,9 +1,9 @@
 <?php
 //Not sure yet what this does!
 
-
+#Tempfix- removing ,c.classid,'.Charid.'
 	if(isset($_SESSION[SERVER_NAME."login"])){
-	$user = $conexao->prepare("SELECT a.*,c.char_name,c.account_name,c.accesslevel,c.classid,'.Charid.' FROM accounts AS a, characters AS c WHERE a.login = ? AND c.account_name = ?");
+	$user = $conexao->prepare("SELECT a.*,c.char_name,c.account_name,c.accesslevel FROM accounts AS a, characters AS c WHERE a.login = ? AND c.account_name = ?");
 	$user->execute(array($_SESSION[SERVER_NAME."login"],$_SESSION[SERVER_NAME."login"]));
 	$res_user = $user->fetch(PDO::FETCH_ASSOC);
 	}

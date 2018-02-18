@@ -1,25 +1,25 @@
 <?php if(!isset($pros)){echo 'Protected Page'; exit;};?>
-
+<? date_default_timezone_set('Europe/Riga'); ?>
 <form action="" method="post">
 
-    <input type="text" name="titulo" placeholder="Titulo">
-    <input type="text" name="autor" value="" placeholder="Autor">
+    <input type="text" name="titulo" placeholder="Title">
+    <input type="text" name="autor" value="" placeholder="Author">
     <input type="text" name="data" value="<?php echo date('d/m/Y H:i:s'); ?>">
     <select name="destaque">
-    	<option>Destacar esta noticia ?</option>
-    	<option value="0">Não</option>
-        <option value="1">Sim</option>
+    	<option>Highlight this post??</option>
+    	<option value="0">No</option>
+        <option value="1">Yes</option>
     </select>
     
     <select name="privar">
-    	<option>Privar esta noticia ?</option>
-       	<option value="0">Não</option>
-        <option value="1">Sim</option>
+    	<option>Private post?</option>
+       	<option value="0">No</option>
+        <option value="1">Yes</option>
     </select>
     
     <textarea name="noticia"></textarea>
     
-    <input type="submit" name="send" value="Postar Noticia" class="btn" style="margin-top:15px;">
+    <input type="submit" name="send" value="Publish" class="btn" style="margin-top:15px;">
     
     <?php
 	if(isset($_POST['send'])){

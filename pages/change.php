@@ -5,14 +5,7 @@
     </div>';
 }else{?>
 		<hgroup>
-			<h2>Password change</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<br>
+			<center><h2>Password change</h2></center>
 	<form action="" method="post" class="change-pass">
     <input type="text" placeholder="Enter login name" name="login">
     <input type="password" placeholder="Enter old password" name="senha">
@@ -24,9 +17,9 @@
 <?php
 if(isset($_POST['change'])){
 	$login = strip_tags($_POST['login']);
-	$senha = base64_encode(pack('H*', sha1($_POST['senha'])));	
-	$new   = base64_encode(pack('H*', sha1($_POST['new'])));	
-	$renew = base64_encode(pack('H*', sha1($_POST['renew'])));	
+	$senha = $_POST['senha'];	
+	$new   = $_POST['new'];	
+	$renew = $_POST['renew'];	
 	if($login == false){
 		echo '<div class="alert alert-danger">
         <strong>Error changing!</strong> Fill in the login field.

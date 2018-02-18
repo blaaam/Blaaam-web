@@ -32,7 +32,7 @@ if($destaque->rowCount() >= 1){
 ?>
 			<table class="doacoes_destaque" width="628">
 				<tr>
-					<td class="icon"><img src="_imagens/itens/<?php echo $res_destaque['item_id'];?>.png" alt=""/></td>
+					<td class="icon"><img src="images/items/<?php echo $res_destaque['item_id'];?>.png" alt=""/></td>
 					<td class="nome"><span class="pname"><i><?php echo $res_destaque['name'];?></i></span></td>
 					<td class="preco"><span class="dprice"><i><?php echo $res_destaque['preco_antigo'];?></i></span></td>
 					<td class="preco"><span class="pprice"><i><?php echo $res_destaque['preco_atual'];?></i></span></td>
@@ -56,11 +56,11 @@ while($res = $sql->fetch(PDO::FETCH_ASSOC)){
 
 			<table class="doacoes">
 				<tr>
-					<td class="icon"><img src="_imagens/itens/<?php echo $res['item_id'];?>.png" alt=""/></td>
+					<td class="icon"><img src="images/items/<?php echo $res['item_id'];?>.png" alt=""/></td>
 					<td class="nome"><span class="pname"><i><?php echo $res['name'];?></i></span></td>
 					<td class="preco"><span class="dprice"><i><?php echo $res['preco_antigo'];?></i></span></td>
 					<td class="preco"><span class="pprice"><i><?php echo $res['preco_atual'];?></i></span></td>
-					<td class="botao"><a href="index.php?pag=retirar-doacoes/<?php echo $res['id'] ?>">Make donation</a></td>
+					<td class="botao"><a href="index.php?pag=make_donation/<?php echo $res['id'] ?>">Make donation</a></td>
 				</tr>
 			</table>
 <?php

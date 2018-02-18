@@ -1,14 +1,14 @@
 <?php 
 
 //  CONFIGS
- define ("PATH_LOGINSERVER", "../home/h5/loginserver/log/stdout.log"); // Path to Login server log file
- define ("PATH_GAMESERVER", "../home/h5/gameserver/log/stdout.log"); // Path to Game server log file
+ define ("PATH_LOGINSERVER", "/home/h5/loginserver/log/stdout.log"); // Path to Login server log file
+ define ("PATH_GAMESERVER", "/home/h5/gameserver/log/stdout.log"); // Path to Game server log file
  define ("SERVER_NAME", "Lineage 2 Adventure"); // Write your server name here
- define ("RATE_XP", "100"); // Server rate XP, will be displayed in top-bar at web pages
- define ("RATE_SP", "100"); // Server rate SP, will be displayed in top-bar at web pages
- define ("RATE_DROP", "3"); // Server rate DROP, will be displayed in top-bar at web pages
- define ("RATE_ADENA", "2"); // Server rate ADENA, will be displayed in top-bar at web pages
- define ("RATE_SPOIL", "1"); // Server rate SPOIL, will be displayed in top-bar at web pages
+ define ("RATE_XP", "50"); // Server rate XP, will be displayed in top-bar at web pages
+ define ("RATE_SP", "50"); // Server rate SP, will be displayed in top-bar at web pages
+ define ("RATE_DROP", "25"); // Server rate DROP, will be displayed in top-bar at web pages
+ define ("RATE_ADENA", "45"); // Server rate ADENA, will be displayed in top-bar at web pages
+ define ("RATE_SPOIL", "3"); // Server rate SPOIL, will be displayed in top-bar at web pages
  define ("PATH_LOGO", ""); // Path to logo file (Not used currently)
  define ("PATH_SLIDE1", "images/img/dummy-640x310-1.jpg"); // Path to image for first slide in web page
  define ("PATH_SLIDE2", "images/img/dummy-640x310-2.jpg"); // Path to image for second slide in web page

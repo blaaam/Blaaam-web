@@ -1,19 +1,19 @@
 <?php if(!isset($pro)){echo $lang['PROTECTED']; exit;};?>
 		<hgroup>
 			<h2><?php echo $lang['CAD_SYS']; ?></h2>
-			<p><?php echo $lang['CAD_NOTICE']; ?></p>
+		<!--	<p><?php echo $lang['CAD_NOTICE']; ?></p>
 
       <p></p>
-			
+			-->
 		</hgroup>
 
-  <section class="termos">
+ <!-- <section class="termos">
     <h2><?php echo $lang['CAD_TERM']; ?></h2>
     <p>- <span class="title-termos">Nr. 1:</span><?php echo $lang['CAD_TERM1']; ?></p>
 
     <p>- <span class="title-termos">Nr. 2:</span><?php echo $lang['CAD_TERM2']; ?></p>
 
-    <p>- <span class="title-termos">Nr. 3:</span><?php echo $lang['CAD_TERM3']; ?></p>
+     <p>- <span class="title-termos">Nr. 3:</span><?php echo $lang['CAD_TERM3']; ?></p>
 
     <p>- <span class="title-termos">Nr. 4:</span><?php echo $lang['CAD_TERM4']; ?></p>
 
@@ -29,7 +29,8 @@
 
     <p>- <span class="title-termos">Nr. 10:</span><?php echo $lang['CAD_TERM10']; ?></p>
 
-  </section>
+ </section> 
+-->
 
 <form action="" class="cadastro" method="post" enctype="multipart/form-data">
 	<input type="text" name="nome" id="nome" placeholder="<?php echo $lang['CAD_NAME']; ?>"/>
@@ -49,8 +50,8 @@ if(isset($_POST['cadastrar'])){
   $usuario    = trim(strip_tags($_POST['usuario']));
   $pergunta   = trim(strip_tags($_POST['pergunta']));
   $resposta   = trim(strip_tags($_POST['resposta']));
-  $senha      = base64_encode(pack('H*', sha1($_POST['senha'])));
-  $rsenha     = base64_encode(pack('H*', sha1($_POST['rsenha'])));
+  $senha      = $_POST['senha'];
+  $rsenha     = $_POST['rsenha'];
   $email      = trim(strip_tags($_POST['email']));
 
   if($nome == false){

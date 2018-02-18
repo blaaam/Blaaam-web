@@ -10,7 +10,7 @@
   </tr>
   <?php
   $i = 1;
-  $sql = $conexao->prepare("SELECT *,items.* from characters as c inner join items on c.charId = items.owner_id where accesslevel = '100' and items.item_id = ".DropItemId." order by items.count DESC LIMIT 25");
+  $sql = $conexao->prepare("SELECT *,items.* from characters as c inner join items on c.obj_Id = items.owner_id where accesslevel = '0' and items.item_id = ".DropItemId." order by items.count DESC LIMIT 25");
   $sql->execute();
   while($res = $sql->fetch(PDO::FETCH_ASSOC)){
 
@@ -29,7 +29,7 @@
     <td align="center"><?php echo $img ;?></td>
     <td align="center"><?php echo $res['char_name']; ?></td>
     <td align="center"><?php echo number_format($res['count'],0,'.','.');?></td>
-    <td align="center"><img src="_imagens/itens/<?php echo $res['item_id'];?>.png" alt=""/></td>
+    <td align="center"><img src="images/items/<?php echo $res['item_id'];?>.png" alt=""/></td>
   </tr>
   <?php
   $i++;

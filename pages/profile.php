@@ -4,9 +4,14 @@
         <strong>Access restricted!</strong> You must be loged in to see content!
     </div>';
 }else{?>
+<?php 
+echo"
 
+
+<span class='admin'><span class='username'>Profile:</span> $res[account_name]</span>";
+?>
 <?php
-//Not done yet with class display!	
+
 $things = array(
   		 '0' => 'Human Fighter',
 		 '1' => 'Warrior',
@@ -168,8 +173,6 @@ $things = array(
 );
 
 
-
-
 	function online($str){
 		$div = time() - (time() - $str);
 		$div1 = ($div % 86400);
@@ -182,7 +185,10 @@ $things = array(
 		return $retotno = "$dias Day's $horas Hour's $minutos Minutes";
 		
 	}
-	$PegaPersonagens = $conexao->prepare("SELECT *,(SELECT clan_name FROM clan_data WHERE characters.clanid = clan_id) AS clan FROM characters WHERE account_name = ?");
+	$PegaPersonagens = $conexao->prepare("SELECT *,(SELECT name FROM clan_subpledges WHERE characters.clanid = clan_id) AS clan,(SELECT class_id FROM character_subclasses WHERE characters.obj_Id = char_obj_id) AS class,(SELECT level FROM character_subclasses WHERE characters.obj_Id = char_obj_id) AS level FROM characters WHERE account_name = ?");
+  
+
+
 	$PegaPersonagens->execute(array($res_user['login']));
 	if($PegaPersonagens->rowCount() <= 0){
 		echo "<div id=\"no\">You don't have characters yet!</div>";	
@@ -192,19 +198,18 @@ $things = array(
 	foreach($a as $res){
 		$res['clan'] = empty($res['clan']) ? 'No clan' : $res['clan'];
 		$res['online'] = $res['online'] == 1 ? 'Yes' : 'No';
-		$res['nobless'] = $res['nobless'] == 1 ? 'Yes' : 'No';
+		$res['nobless'] = $res['nobless'] == 1 ? 'Yes' : 'No';		  
 		echo "
-			<span class='admin'><span class='username'>Profile:</span> $res[account_name]</span>
-			<table class='ranking'>
+		<table class='ranking'>
 				<tr>
 					<tr><td>Characters in the account:</td><td> $res[char_name]</td></tr>
 					<tr><td>Level:</td><td> $res[level]</td></tr>
-					<tr><td>Class:</td><td>".$things[$res['classid']]."</td></tr>
+					<tr><td>Class:</td><td>".$things[$res['class']]."</td></tr>
 					<tr><td>Clan:</td><td> $res[clan]</td></tr>
 					<tr><td>PvPs:</td><td> $res[pvpkills]</td></tr>
 					<tr><td>Pks:</td><td> $res[pkkills]</td></tr>
 					<tr><td>Title:</td><td> $res[title]</td></tr>
-					<tr><td>Reputation:</td><td> $res[reputation]</td></tr>
+					<tr><td>Reputation:</td><td> $res[rec_have]</td></tr>
 					<tr><td>Online:</td><td> $res[online]</td></tr>
 					<tr><td>Online time:</td><td> ".online($res['onlinetime'])."</td></tr>
 					<tr><td>Nobless:</td><td> $res[nobless]</td></tr>
